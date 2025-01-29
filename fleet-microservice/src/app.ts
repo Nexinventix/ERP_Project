@@ -8,41 +8,38 @@ import { dbConnect } from '@databases'
 import helmet from 'helmet'
 import { set, connect, disconnect } from 'mongoose'
 
-class App {
-   public app: Application
-   public port: number | string
-   public env: string
+const App = {
+   app: express(),
+   port: PORT || 5000,
+   env: NODE_ENV || 'development',
 
-   constructor() {
-      this.app = express()
-      this.env = NODE_ENV || 'development'
-      this.port = PORT || 5000
-
+   initialize() {
       //this function automatic run
       this.initializeMiddlewares()
       this.connectToDatabase()
-      this.initializeRoutes();
-      // this.initializeErrorHandling();
-   }
-   public listen() {
+      this.initializeRoutes()
+      // this.initializeErrorHandling()
+   },
+
+   listen() {
       this.app.listen(this.port, () => {
          logger.info(`=================================`)
          logger.info(`======= ENV: ${this.env} =======`)
          logger.info(`🚀 App listening onn the port ${this.port}`)
          logger.info(`=================================`)
       })
-   }
+   },
 
-   public async closeDatabaseConnection(): Promise<void> {
+   async closeDatabaseConnection() {
       try {
          await disconnect()
          logger.info('database (mongoDbB) has been disconnect successfully')
       } catch (error) {
          logger.info('something happen when closing database', error)
       }
-   }
+   },
 
-   private async connectToDatabase() {
+   async connectToDatabase() {
       if (this.env !== 'production') {
          set('debug', true)
       }
@@ -53,23 +50,24 @@ class App {
       } catch (error) {
          logger.info('Error connecting to the database:op', error)
       }
-   }
+   },
 
-   private initializeMiddlewares() {
+   initializeMiddlewares() {
       this.app.use(morgan('combined', { stream }))
       this.app.use(cors())
       this.app.use(express.json())
       this.app.use(helmet())
       this.app.use(cookieParser())
+   },
 
-
+   initializeRoutes() {
+      this.app.get('/api/test', (req, res) => {
+         res.status(200).json({ message: 'GET request successful!' })
+      })
    }
-
-   private initializeRoutes() {
-    this.app.get('/api/test', (req, res) => {
-      res.status(200).json({ message: 'GET request successful!' });
-  });
-  }
 }
+
+// Initialize the app
+App.initialize()
 
 export default App

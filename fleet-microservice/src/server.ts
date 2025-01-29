@@ -2,13 +2,13 @@ import App from '@/app'
 import { logger } from '@utils/logger'
 // import AuthRoute from '@/routes/auth.route';
 
-const app = new App()
-app.listen()
+// const app = App()
+App.listen()
 
 async function shutdownServer(signal: string) {
    try {
       logger.info(`Received ${signal}. Shutting down server...`)
-      await app.closeDatabaseConnection()
+      await App.closeDatabaseConnection()
       logger.info('Server stopped gracefully.')
       process.exit(0)
    } catch (error) {
@@ -19,7 +19,7 @@ async function shutdownServer(signal: string) {
 
 async function handleUncaughtError(error: Error) {
    logger.error('Server shutting down due to uncaught exception:', error)
-   await app.closeDatabaseConnection()
+   await App.closeDatabaseConnection()
    process.exit(1)
 }
 
@@ -28,7 +28,7 @@ console.log('sdf')
 async function handleUnhandledRejection(reason: string, promise: Promise<any>) {
    logger.error('Unhandled promise rejection:', reason)
    logger.info('Promise:', promise)
-   await app.closeDatabaseConnection()
+   await App.closeDatabaseConnection()
    process.exit(1)
 }
 
