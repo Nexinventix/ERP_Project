@@ -1,0 +1,183 @@
+2025-03-28 11:29:39 info: =================================
+2025-03-28 11:29:39 info: ======= ENV: development =======
+2025-03-28 11:29:39 info: 🚀 App listening onn the port 5000
+2025-03-28 11:29:39 info: =================================
+2025-03-28 11:29:44 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 11:31:31 info: =================================
+2025-03-28 11:31:31 info: ======= ENV: development =======
+2025-03-28 11:31:31 info: 🚀 App listening onn the port 5000
+2025-03-28 11:31:31 info: =================================
+2025-03-28 11:31:34 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 11:32:44 info: =================================
+2025-03-28 11:32:44 info: ======= ENV: development =======
+2025-03-28 11:32:44 info: 🚀 App listening onn the port 5000
+2025-03-28 11:32:44 info: =================================
+2025-03-28 11:32:50 info: Database connecteD successfully!
+2025-03-28 11:32:50 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 11:36:29 info: =================================
+2025-03-28 11:36:29 info: ======= ENV: development =======
+2025-03-28 11:36:29 info: 🚀 App listening onn the port 5000
+2025-03-28 11:36:29 info: =================================
+2025-03-28 11:36:33 info: Database connecteD successfully!
+2025-03-28 11:36:33 info: MongoDBcf connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-03-28 11:41:27 info: Received SIGINT. Shutting down server...
+2025-03-28 11:43:15 info: =================================
+2025-03-28 11:43:15 info: ======= ENV: development =======
+2025-03-28 11:43:15 info: 🚀 App listening onn the port 5000
+2025-03-28 11:43:15 info: =================================
+2025-03-28 11:43:20 info: Database connecteD successfully!
+2025-03-28 11:43:20 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:00:14 info: =================================
+2025-03-28 14:00:14 info: ======= ENV: development =======
+2025-03-28 14:00:14 info: 🚀 App listening onn the port 5000
+2025-03-28 14:00:14 info: =================================
+2025-03-28 14:00:18 info: Database connecteD successfully!
+2025-03-28 14:00:18 info: MongoDBcf connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-28 14:15:36 info: =================================
+2025-03-28 14:15:36 info: ======= ENV: development =======
+2025-03-28 14:15:36 info: 🚀 App listening onn the port 5000
+2025-03-28 14:15:36 info: =================================
+2025-03-28 14:15:39 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:16:43 info: =================================
+2025-03-28 14:16:43 info: ======= ENV: development =======
+2025-03-28 14:16:43 info: 🚀 App listening onn the port 5000
+2025-03-28 14:16:43 info: =================================
+2025-03-28 14:16:46 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:17:16 info: =================================
+2025-03-28 14:17:16 info: ======= ENV: development =======
+2025-03-28 14:17:16 info: 🚀 App listening onn the port 5000
+2025-03-28 14:17:16 info: =================================
+2025-03-28 14:17:19 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:23:31 info: =================================
+2025-03-28 14:23:31 info: ======= ENV: development =======
+2025-03-28 14:23:31 info: 🚀 App listening onn the port 5000
+2025-03-28 14:23:31 info: =================================
+2025-03-28 14:23:34 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:26:44 info: =================================
+2025-03-28 14:26:44 info: ======= ENV: development =======
+2025-03-28 14:26:44 info: 🚀 App listening onn the port 5000
+2025-03-28 14:26:44 info: =================================
+2025-03-28 14:26:47 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:27:48 info: Received SIGINT. Shutting down server...
+2025-03-28 14:29:19 info: =================================
+2025-03-28 14:29:19 info: ======= ENV: development =======
+2025-03-28 14:29:19 info: 🚀 App listening onn the port 5000
+2025-03-28 14:29:19 info: =================================
+2025-03-28 14:29:22 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:29:39 info: Received SIGINT. Shutting down server...
+2025-03-28 14:29:45 info: =================================
+2025-03-28 14:29:45 info: ======= ENV: development =======
+2025-03-28 14:29:45 info: 🚀 App listening onn the port 5000
+2025-03-28 14:29:45 info: =================================
+2025-03-28 14:29:49 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:32:00 info: =================================
+2025-03-28 14:32:00 info: ======= ENV: development =======
+2025-03-28 14:32:00 info: 🚀 App listening onn the port 5000
+2025-03-28 14:32:00 info: =================================
+2025-03-28 14:32:04 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:32:22 info: =================================
+2025-03-28 14:32:22 info: ======= ENV: development =======
+2025-03-28 14:32:22 info: 🚀 App listening on the port 5000
+2025-03-28 14:32:22 info: =================================
+2025-03-28 14:32:28 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:39:50 info: =================================
+2025-03-28 14:39:50 info: ======= ENV: development =======
+2025-03-28 14:39:50 info: 🚀 App listening on the port 5000
+2025-03-28 14:39:50 info: =================================
+2025-03-28 14:39:55 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:40:38 info: =================================
+2025-03-28 14:40:38 info: ======= ENV: development =======
+2025-03-28 14:40:38 info: 🚀 App listening on the port 6000
+2025-03-28 14:40:38 info: =================================
+2025-03-28 14:40:41 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:41:11 info: =================================
+2025-03-28 14:41:11 info: ======= ENV: development =======
+2025-03-28 14:41:11 info: 🚀 App listening on the port 7000
+2025-03-28 14:41:11 info: =================================
+2025-03-28 14:41:14 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:42:07 info: =================================
+2025-03-28 14:42:07 info: ======= ENV: development =======
+2025-03-28 14:42:07 info: 🚀 App listening on the port 7000
+2025-03-28 14:42:07 info: =================================
+2025-03-28 14:42:10 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:42:55 info: =================================
+2025-03-28 14:42:55 info: ======= ENV: development =======
+2025-03-28 14:42:55 info: 🚀 App listening on the port 8000
+2025-03-28 14:42:55 info: =================================
+2025-03-28 14:42:58 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:44:57 info: =================================
+2025-03-28 14:44:57 info: ======= ENV: development =======
+2025-03-28 14:44:57 info: 🚀 App listening on the port 8000
+2025-03-28 14:44:57 info: =================================
+2025-03-28 14:45:00 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:45:29 info: =================================
+2025-03-28 14:45:29 info: ======= ENV: development =======
+2025-03-28 14:45:29 info: 🚀 App listening on the port 8000
+2025-03-28 14:45:29 info: =================================
+2025-03-28 14:45:34 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:45:58 info: =================================
+2025-03-28 14:45:58 info: ======= ENV: development =======
+2025-03-28 14:45:58 info: 🚀 App listening on the port 8000
+2025-03-28 14:45:58 info: =================================
+2025-03-28 14:46:01 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:47:19 info: =================================
+2025-03-28 14:47:19 info: ======= ENV: development =======
+2025-03-28 14:47:19 info: 🚀 App listening on the port 8000
+2025-03-28 14:47:19 info: =================================
+2025-03-28 14:47:22 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:47:24 info: Received SIGINT. Shutting down server...
+2025-03-28 14:50:19 info: =================================
+2025-03-28 14:50:19 info: ======= ENV: development =======
+2025-03-28 14:50:19 info: 🚀 App listening on the port 8000
+2025-03-28 14:50:19 info: =================================
+2025-03-28 14:50:24 info: Database connecteD successfully!
+2025-03-28 14:50:24 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:50:39 info: =================================
+2025-03-28 14:50:39 info: ======= ENV: development =======
+2025-03-28 14:50:39 info: 🚀 App listening on the port 8000
+2025-03-28 14:50:39 info: =================================
+2025-03-28 14:50:42 info: Database connecteD successfully!
+2025-03-28 14:50:42 info: MongoDBcf connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-28 14:50:57 info: =================================
+2025-03-28 14:50:57 info: ======= ENV: development =======
+2025-03-28 14:50:57 info: 🚀 App listening on the port 8000
+2025-03-28 14:50:57 info: =================================
+2025-03-28 14:51:00 info: Database connecteD successfully!
+2025-03-28 14:51:00 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:52:32 info: =================================
+2025-03-28 14:52:32 info: ======= ENV: development =======
+2025-03-28 14:52:32 info: 🚀 App listening on the port 8000
+2025-03-28 14:52:32 info: =================================
+2025-03-28 14:52:37 info: Database connected successfully!
+2025-03-28 14:52:37 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:53:46 info: =================================
+2025-03-28 14:53:46 info: ======= ENV: development =======
+2025-03-28 14:53:46 info: 🚀 App listening on the port 8000
+2025-03-28 14:53:46 info: =================================
+2025-03-28 14:53:52 info: Database connected successfully!
+2025-03-28 14:53:52 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:54:46 info: =================================
+2025-03-28 14:54:46 info: ======= ENV: development =======
+2025-03-28 14:54:46 info: 🚀 App listening on the port 8000
+2025-03-28 14:54:46 info: =================================
+2025-03-28 14:54:49 info: Database connected successfully!
+2025-03-28 14:54:49 info: MongoDBcf connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-28 15:01:51 info: =================================
+2025-03-28 15:01:51 info: ======= ENV: development =======
+2025-03-28 15:01:51 info: 🚀 App listening on the port 8000
+2025-03-28 15:01:51 info: =================================
+2025-03-28 15:01:56 info: Database connected successfully!
+2025-03-28 15:01:56 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 15:02:26 info: =================================
+2025-03-28 15:02:26 info: ======= ENV: development =======
+2025-03-28 15:02:26 info: 🚀 App listening on the port 8000
+2025-03-28 15:02:26 info: =================================
+2025-03-28 15:02:31 info: Database connected successfully!
+2025-03-28 15:02:31 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 15:27:13 info: =================================
+2025-03-28 15:27:13 info: ======= ENV: development =======
+2025-03-28 15:27:13 info: 🚀 App listening on the port 8000
+2025-03-28 15:27:13 info: =================================
+2025-03-28 15:27:16 info: Database connected successfully!
+2025-03-28 15:27:16 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-28 15:29:21 info: Received SIGINT. Shutting down server...

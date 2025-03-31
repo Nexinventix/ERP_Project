@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\.f25a9b9a9694d59530d62cc541a426e83217c7e0-audit.json",
+    "files": [
+        {
+            "date": 1743157779144,
+            "name": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-03-28.log",
+            "hash": "ebad0f39e0c3c44d47a0d71a0fe28e795ab1245f2fb0a309a16c3e75ffd9fbb2"
+        },
+        {
+            "date": 1743290206818,
+            "name": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-03-30.log",
+            "hash": "ecac5d5a7dd741ac884bf5f37f3e57675af8b9d11444869de9cbc4df5b561ac1"
+        },
+        {
+            "date": 1743376232237,
+            "name": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-03-31.log",
+            "hash": "89ce020272fbb0fd454c0773e821d6eefffb5d0721a8408e63fde1499c9b31aa"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,70 @@
+2025-03-30 00:16:47 info: =================================
+2025-03-30 00:16:47 info: ======= ENV: development =======
+2025-03-30 00:16:47 info: 🚀 App listening on the port 8000
+2025-03-30 00:16:47 info: =================================
+2025-03-30 00:16:54 info: Database connected successfully!
+2025-03-30 00:16:54 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-30 00:18:23 info: =================================
+2025-03-30 00:18:23 info: ======= ENV: development =======
+2025-03-30 00:18:23 info: 🚀 App listening on the port 8000
+2025-03-30 00:18:23 info: =================================
+2025-03-30 00:18:28 info: Database connected successfully!
+2025-03-30 00:18:28 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-30 00:21:36 info: =================================
+2025-03-30 00:21:36 info: ======= ENV: development =======
+2025-03-30 00:21:36 info: 🚀 App listening on the port 8000
+2025-03-30 00:21:36 info: =================================
+2025-03-30 00:21:41 info: Database connected successfully!
+2025-03-30 00:21:41 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-30 00:23:49 info: ::1 - - [29/Mar/2025:23:23:49 +0000] "GET /api/test HTTP/1.1" 200 37 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-03-30 00:23:49 info: ::1 - - [29/Mar/2025:23:23:49 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+2025-03-30 00:25:08 info: Received SIGINT. Shutting down server...
+2025-03-30 00:45:26 info: =================================
+2025-03-30 00:45:26 info: ======= ENV: development =======
+2025-03-30 00:45:26 info: 🚀 App listening on the port 8000
+2025-03-30 00:45:26 info: =================================
+2025-03-30 00:45:29 info: Database connected successfully!
+2025-03-30 00:45:29 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-03-30 00:45:56 info: =================================
+2025-03-30 00:45:56 info: ======= ENV: development =======
+2025-03-30 00:45:56 info: 🚀 App listening on the port 8000
+2025-03-30 00:45:56 info: =================================
+2025-03-30 00:45:59 info: Database connected successfully!
+2025-03-30 00:45:59 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-30 00:50:05 info: =================================
+2025-03-30 00:50:05 info: ======= ENV: development =======
+2025-03-30 00:50:05 info: 🚀 App listening on the port 8000
+2025-03-30 00:50:05 info: =================================
+2025-03-30 00:50:09 info: Database connected successfully!
+2025-03-30 00:50:09 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-30 00:50:51 info: Received SIGINT. Shutting down server...
+2025-03-30 23:49:08 info: =================================
+2025-03-30 23:49:08 info: ======= ENV: development =======
+2025-03-30 23:49:08 info: 🚀 App listening on the port 8000
+2025-03-30 23:49:08 info: =================================
+2025-03-30 23:49:11 info: Database connected successfully!
+2025-03-30 23:49:11 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-03-30 23:50:25 info: =================================
+2025-03-30 23:50:25 info: ======= ENV: development =======
+2025-03-30 23:50:25 info: 🚀 App listening on the port 8000
+2025-03-30 23:50:25 info: =================================
+2025-03-30 23:50:28 info: Database connected successfully!
+2025-03-30 23:50:28 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-30 23:50:52 info: =================================
+2025-03-30 23:50:52 info: ======= ENV: development =======
+2025-03-30 23:50:52 info: 🚀 App listening on the port 8000
+2025-03-30 23:50:52 info: =================================
+2025-03-30 23:50:55 info: Database connected successfully!
+2025-03-30 23:50:55 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-03-30 23:56:50 info: =================================
+2025-03-30 23:56:50 info: ======= ENV: development =======
+2025-03-30 23:56:50 info: 🚀 App listening on the port 8000
+2025-03-30 23:56:50 info: =================================
+2025-03-30 23:56:54 info: Database connected successfully!
+2025-03-30 23:56:54 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-03-30 23:57:13 info: =================================
+2025-03-30 23:57:13 info: ======= ENV: development =======
+2025-03-30 23:57:13 info: 🚀 App listening on the port 8000
+2025-03-30 23:57:13 info: =================================
+2025-03-30 23:57:16 info: Database connected successfully!
+2025-03-30 23:57:16 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net

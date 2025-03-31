@@ -1,0 +1,18 @@
+2025-03-28 11:42:50 error: uncaughtException: Cannot find module '@database'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+Error: Cannot find module '@database'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1244:15)
+    at Function.Module._resolveFilename (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts:7:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
