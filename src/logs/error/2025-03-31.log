@@ -56,3 +56,15 @@ Require stack:
     at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\utils\emailService.ts:1:1)
     at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
     at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+2025-03-31 18:56:02 error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as put] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts:17:8)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:114:20)
+    at require.extensions.<computed> (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\ts-node-dev\lib\hook.js:63:13)

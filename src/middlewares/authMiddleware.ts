@@ -17,8 +17,8 @@ export const authMiddleware = async (req: AuthenticatedRequest, res: Response, n
       throw new Error('Authentication required');
     }
 
-    const decoded = jwt.verify(token, SECRET_KEY!) as { _id: string };
-    const user = await Users.findOne({ _id: decoded._id });
+    const decoded = jwt.verify(token, SECRET_KEY!) as { id: string };
+    const user = await Users.findOne({ _id: decoded.id });
 
     if (!user) {
       throw new Error('User not found');

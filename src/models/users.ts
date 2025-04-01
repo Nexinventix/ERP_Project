@@ -30,6 +30,7 @@ export interface User extends Document {
   department: Department;
   modules: Module[];
   isSuperAdmin: boolean;
+  isManager: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -108,6 +109,10 @@ const userSchema = new Schema<User>(
       }
     },
     isSuperAdmin: {
+      type: Boolean,
+      default: false
+    },
+    isManager: {
       type: Boolean,
       default: false
     }

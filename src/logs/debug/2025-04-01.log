@@ -1,0 +1,7 @@
+2025-04-01 13:35:13 info: =================================
+2025-04-01 13:35:13 info: ======= ENV: development =======
+2025-04-01 13:35:13 info: 🚀 App listening on the port 8000
+2025-04-01 13:35:13 info: =================================
+2025-04-01 13:35:18 info: Database connected successfully!
+2025-04-01 13:35:18 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-01 13:36:46 info: Received SIGINT. Shutting down server...

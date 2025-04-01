@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import Users, { User, Module } from '../models/users';
+import Users, { User, Module, Department } from '../models/users';
 import { sendEmail } from '@utils/emailService'; // Placeholder for email function
 import {
     SECRET_KEY
@@ -27,17 +27,6 @@ class UserController {
       const hashedPassword = await bcrypt.hash(password, 10);
 
       // Create the super admin
-    //   const superAdmin = new Users({
-    //     firstName,
-    //     lastName,
-    //     phoneNumber,
-    //     email,
-    //     password: hashedPassword,
-    //     department: 'ADMIN', // Assign a default department
-    //     modules: [], // Super admins have access to all modules
-    //     isSuperAdmin: true
-    //   });
-
     const superAdmin = new Users({
         firstName,
         lastName,
@@ -153,7 +142,7 @@ class UserController {
         return res.status(401).json({ message: 'Invalid credentials' });
       }
 
-      const token = jwt.sign({ id: user._id, isSuperAdmin: user.isSuperAdmin }, process.env.JWT_SECRET!, {
+      const token = jwt.sign({ id: user._id, isSuperAdmin: user.isSuperAdmin }, SECRET_KEY!, {
         expiresIn: '7d',
       });
 
@@ -207,6 +196,95 @@ class UserController {
       } else {
         res.status(400).json({ message: 'An unknown error occurred' });
       }
+    }
+  }
+
+  async grantPermission(req: AuthenticatedRequest, res: Response) {
+    try {
+      if (!req.user.isSuperAdmin) {
+        return res.status(403).json({ message: 'Only super admins can grant permissions' });
+      }
+
+      const { userId } = req.params;
+      const { department } = req.body;
+
+      if (!Object.values(Department).includes(department)) {
+        return res.status(400).json({ message: 'Invalid department' });
+      }
+
+      const user = await Users.findById(userId);
+      if (!user) return res.status(404).json({ message: 'User not found' });
+
+      if (!user.modules.includes(department)) {
+        user.modules.push(department as Module);
+        await user.save();
+      }
+
+      res.json({ message: 'Permission granted', user });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  // Revoke Permission (Remove Department from User's Modules)
+  async revokePermission(req: AuthenticatedRequest, res: Response) {
+    try {
+      if (!req.user.isSuperAdmin) {
+        return res.status(403).json({ message: 'Only super admins can revoke permissions' });
+      }
+
+      const { userId } = req.params;
+      const { department } = req.body;
+
+      if (!Object.values(Department).includes(department)) {
+        return res.status(400).json({ message: 'Invalid department' });
+      }
+
+      const user = await Users.findById(userId);
+      if (!user) return res.status(404).json({ message: 'User not found' });
+
+      user.modules = user.modules.filter(mod => mod !== department);
+      await user.save();
+
+      res.json({ message: 'Permission revoked', user });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  // Update User Info
+  async updateUser(req: AuthenticatedRequest, res: Response) {
+    try {
+      if (!req.user.isSuperAdmin) {
+        return res.status(403).json({ message: 'Only super admins can update users' });
+      }
+
+      const { userId } = req.params;
+      const updates = req.body;
+
+      const user = await Users.findByIdAndUpdate(userId, updates, { new: true, runValidators: true });
+      if (!user) return res.status(404).json({ message: 'User not found' });
+
+      res.json({ message: 'User updated', user });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  // Delete User
+  async deleteUser(req: AuthenticatedRequest, res: Response) {
+    try {
+      if (!req.user.isSuperAdmin) {
+        return res.status(403).json({ message: 'Only super admins can delete users' });
+      }
+
+      const { userId } = req.params;
+      const user = await Users.findByIdAndDelete(userId);
+      if (!user) return res.status(404).json({ message: 'User not found' });
+
+      res.json({ message: 'User deleted successfully' });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
     }
   }
 }
