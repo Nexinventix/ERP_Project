@@ -62,7 +62,7 @@ class UserController {
         return res.status(403).json({ message: 'Only super admins can create users' });
       }
 
-      const { firstName, lastName, phoneNumber, email, department, modules, isSuperAdmin } = req.body;
+      const { firstName, lastName, phoneNumber, email, department, modules, isSuperAdmin, isAdministrator } = req.body;
 
       // Generate a temporary password
       const tempPassword = Math.random().toString(36).slice(-8);
@@ -77,13 +77,16 @@ class UserController {
         department,
         modules: modules || [department], // Default modules to department
         isSuperAdmin: isSuperAdmin || false,
+        isAdministrator: isAdministrator || false,
       });
 
       await user.save();
 
-      // Send email notification
-      await sendEmail(email, 'Your Account Has Been Created', 
-        `Hello ${firstName}, your account has been created. Your temporary password is: ${tempPassword}. Please log in and update your password.`);
+      // Send email notification (HTML and plain text)
+      const plainText = `Hello ${firstName},\r\n\r\nWelcome to DreamWorks ERP!\r\n\r\nYour account has been successfully created.\r\n\r\nEmail: ${email}\r\nTemporary Password: ${tempPassword}\r\n\r\nFor your security, please log in as soon as possible and update your password.\r\n\r\nIf you have any questions or need assistance, feel free to reply to this email.\r\n\r\nBest regards,\r\nThe DreamWorks ERP Team`;
+      const { generateAccountCreatedEmailHTML } = await import('@utils/emailService');
+      const html = generateAccountCreatedEmailHTML(firstName, email, tempPassword);
+      await sendEmail(email, 'Your Account Has Been Created', plainText, html);
 
       res.status(201).json({ message: 'User created successfully, an email has been sent.' });
     } catch (error) {
@@ -142,7 +145,7 @@ class UserController {
         return res.status(401).json({ message: 'Invalid credentials' });
       }
 
-      const token = jwt.sign({ id: user._id, isSuperAdmin: user.isSuperAdmin }, SECRET_KEY!, {
+      const token = jwt.sign({ id: user._id, isSuperAdmin: user.isSuperAdmin, isAdministrator: user.isAdministrator }, SECRET_KEY!, {
         expiresIn: '7d',
       });
 
@@ -162,13 +165,19 @@ class UserController {
       const { oldPassword, newPassword } = req.body;
       const user = req.user as User;
 
-      const isMatch = await bcrypt.compare(oldPassword, user.password);
+      // Always fetch fresh user from DB with password included
+      const userFromDb = await Users.findById(user._id).select('+password');
+      if (!userFromDb) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+      console.log(userFromDb.password);
+      const isMatch = await bcrypt.compare(oldPassword, userFromDb.password);
       if (!isMatch) {
         return res.status(400).json({ message: 'Old password is incorrect' });
       }
 
-      user.password = await bcrypt.hash(newPassword, 10);
-      await user.save();
+      userFromDb.password = await bcrypt.hash(newPassword, 10);
+      await userFromDb.save();
 
       res.json({ message: 'Password updated successfully' });
     } catch (error) {
@@ -190,6 +199,26 @@ class UserController {
 
       const users = await Users.find().select('-password -__v');
       res.json(users);
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(400).json({ message: error.message });
+      } else {
+        res.status(400).json({ message: 'An unknown error occurred' });
+      }
+    }
+  }
+
+  // Get one users (only superadmins can do this)
+  async getOneUser(req: AuthenticatedRequest, res: Response) {
+    try {
+      const requestingUser = req.user as User;
+      const { userId } = req.params
+      if (!requestingUser.isSuperAdmin) {
+        return res.status(403).json({ message: 'Only super admins can view all users' });
+      }
+
+      const user = await Users.findById(userId).select('-password -__v');
+      res.json(user);
     } catch (error) {
       if (error instanceof Error) {
         res.status(400).json({ message: error.message });
@@ -285,6 +314,44 @@ class UserController {
       res.json({ message: 'User deleted successfully' });
     } catch (error) {
       res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  //Make User an Administrator
+  async makeAdministrator(req: AuthenticatedRequest, res: Response){
+    try{
+      if(!req.user.isSuperAdmin){
+        return res.status(403).json({ message: 'Only super admins can make users admin' });
+      }
+
+      const { userId } = req.params;
+      const user = await Users.findById(userId);
+      if (!user) return res.status(404).json({ message: 'User not found' });
+      user.isAdministrator = true;
+      user.save()
+
+      res.json({ message: 'User now Administrator'})
+    } catch (error){
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error'})
+    }
+  }
+
+  //Remove User as Administrator
+  async removeAdministrator(req: AuthenticatedRequest, res: Response){
+    try{
+      if(!req.user.isSuperAdmin){
+        return res.status(403).json({ message: 'Only super admins can delete users' });
+      }
+
+      const { userId } = req.params;
+      const user = await Users.findById(userId);
+      if (!user) return res.status(404).json({ message: 'User not found' });
+      user.isAdministrator = false;
+      user.save()
+
+      res.json({ message: 'User now Administrator'})
+    } catch (error){
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error'})
     }
   }
 }

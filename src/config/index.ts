@@ -13,4 +13,11 @@ export const {
    SECRET_KEY,
    DB_USER,
    DB_PASSWORD,
+   API_KEY_1,
+   API_KEY_2,
+   CLOUDINARY_CLOUD_NAME,
+   CLOUDINARY_API_KEY,
+   CLOUDINARY_API_SECRET ,
+   EMAIL_USER,
+   EMAIL_PASS
 } = process.env

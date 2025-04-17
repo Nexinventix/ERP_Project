@@ -28,6 +28,7 @@
     "strict": true,
     "skipLibCheck": true
   },
+  "typeRoots": ["./node_modules/@types", "./src/types"],
   "include": ["src/**/*.ts", "src/**/*.json", ".env"],
   "exclude": ["node_modules", "src/tests", "src/logs"]
 }
