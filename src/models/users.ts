@@ -30,7 +30,7 @@ export interface User extends Document {
   department: Department;
   modules: Module[];
   isSuperAdmin: boolean;
-  isManager: boolean;
+  isAdministrator: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -80,14 +80,6 @@ const userSchema = new Schema<User>(
       minlength: [6, 'Password must be at least 6 characters'],
       select: false // Ensures password is not included in queries by default
     },
-    // department: {
-    //   type: String,
-    //   required: [true, 'Department is required'],
-    //   enum: {
-    //     values: Object.values(Department) as string[],
-    //     message: `Department must be one of: ${Object.values(Department).join(', ')}`
-    //   }
-    // },
     department: {
         type: String,
         required: function (this: User) {
@@ -112,7 +104,7 @@ const userSchema = new Schema<User>(
       type: Boolean,
       default: false
     },
-    isManager: {
+    isAdministrator: {
       type: Boolean,
       default: false
     }
