@@ -1,0 +1,327 @@
+2025-04-16 06:48:23 info: ::1 - - [16/Apr/2025:05:48:23 +0000] "POST /api/login HTTP/1.1" 200 270 "-" "PostmanRuntime/7.43.3"
+2025-04-16 06:49:42 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 06:49:42 info: =================================
+2025-04-16 06:49:42 info: ======= ENV: development =======
+2025-04-16 06:49:42 info: 🚀 App listening on the port 8000
+2025-04-16 06:49:42 info: =================================
+2025-04-16 06:49:44 info: Database connected successfully!
+2025-04-16 06:49:44 info: Database connected successfully!
+2025-04-16 06:49:44 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 06:49:57 info: =================================
+2025-04-16 06:49:57 info: ======= ENV: development =======
+2025-04-16 06:49:57 info: 🚀 App listening on the port 8000
+2025-04-16 06:49:57 info: =================================
+2025-04-16 06:49:58 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 06:49:59 info: Database connected successfully!
+2025-04-16 06:49:59 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 06:50:00 info: Database connected successfully!
+2025-04-16 06:59:16 info: =================================
+2025-04-16 06:59:16 info: ======= ENV: development =======
+2025-04-16 06:59:16 info: 🚀 App listening on the port 8000
+2025-04-16 06:59:16 info: =================================
+2025-04-16 06:59:16 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 06:59:18 info: Database connected successfully!
+2025-04-16 06:59:18 info: Database connected successfully!
+2025-04-16 06:59:18 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 06:59:22 info: =================================
+2025-04-16 06:59:22 info: ======= ENV: development =======
+2025-04-16 06:59:22 info: 🚀 App listening on the port 8000
+2025-04-16 06:59:22 info: =================================
+2025-04-16 06:59:23 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 06:59:24 info: Database connected successfully!
+2025-04-16 06:59:24 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 06:59:25 info: Database connected successfully!
+2025-04-16 07:30:44 info: ::1 - - [16/Apr/2025:06:30:44 +0000] "POST /api/driver HTTP/1.1" 404 150 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:31:15 info: ::1 - - [16/Apr/2025:06:31:15 +0000] "POST /api/drivers HTTP/1.1" 500 292 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:34:35 info: =================================
+2025-04-16 07:34:35 info: ======= ENV: development =======
+2025-04-16 07:34:35 info: 🚀 App listening on the port 8000
+2025-04-16 07:34:35 info: =================================
+2025-04-16 07:34:35 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 07:34:37 info: Database connected successfully!
+2025-04-16 07:34:37 info: Database connected successfully!
+2025-04-16 07:34:37 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 07:34:44 info: ::1 - - [16/Apr/2025:06:34:44 +0000] "POST /api/drivers HTTP/1.1" 500 292 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:38:49 info: =================================
+2025-04-16 07:38:49 info: ======= ENV: development =======
+2025-04-16 07:38:49 info: 🚀 App listening on the port 8000
+2025-04-16 07:38:49 info: =================================
+2025-04-16 07:38:50 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 07:38:51 info: Database connected successfully!
+2025-04-16 07:38:51 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 07:38:52 info: Database connected successfully!
+2025-04-16 07:41:03 info: =================================
+2025-04-16 07:41:03 info: ======= ENV: development =======
+2025-04-16 07:41:03 info: 🚀 App listening on the port 8000
+2025-04-16 07:41:03 info: =================================
+2025-04-16 07:41:04 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 07:41:05 info: Database connected successfully!
+2025-04-16 07:41:05 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 07:41:05 info: Database connected successfully!
+2025-04-16 07:41:31 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 07:41:33 info: Database connected successfully!
+2025-04-16 07:42:24 info: ::1 - - [16/Apr/2025:06:42:24 +0000] "POST /api/drivers HTTP/1.1" 500 94 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:43:16 info: ::1 - - [16/Apr/2025:06:43:16 +0000] "POST /api/drivers HTTP/1.1" - - "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:44:06 info: ::1 - - [16/Apr/2025:06:44:06 +0000] "POST /api/drivers HTTP/1.1" 201 994 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:44:26 info: =================================
+2025-04-16 07:44:26 info: ======= ENV: development =======
+2025-04-16 07:44:26 info: 🚀 App listening on the port 8000
+2025-04-16 07:44:26 info: =================================
+2025-04-16 07:44:27 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 07:44:28 info: Database connected successfully!
+2025-04-16 07:44:28 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 07:44:29 info: Database connected successfully!
+2025-04-16 07:51:44 info: ::1 - - [16/Apr/2025:06:51:44 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:56:56 info: ::1 - - [16/Apr/2025:06:56:56 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:57:04 info: ::1 - - [16/Apr/2025:06:57:04 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 07:58:55 info: ::1 - - [16/Apr/2025:06:58:55 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 08:00:05 info: =================================
+2025-04-16 08:00:05 info: ======= ENV: development =======
+2025-04-16 08:00:05 info: 🚀 App listening on the port 8000
+2025-04-16 08:00:05 info: =================================
+2025-04-16 08:00:05 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 08:00:07 info: Database connected successfully!
+2025-04-16 08:00:07 info: Database connected successfully!
+2025-04-16 08:00:07 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 08:00:07 info: ::1 - - [16/Apr/2025:07:00:07 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 08:00:26 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 08:00:28 info: Database connected successfully!
+2025-04-16 08:00:38 info: ::1 - - [16/Apr/2025:07:00:38 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 08:05:16 info: ::1 - - [16/Apr/2025:07:05:16 +0000] "POST /api/vehicles HTTP/1.1" 400 606 "-" "PostmanRuntime/7.43.3"
+2025-04-16 08:07:53 info: =================================
+2025-04-16 08:07:53 info: ======= ENV: development =======
+2025-04-16 08:07:53 info: 🚀 App listening on the port 8000
+2025-04-16 08:07:53 info: =================================
+2025-04-16 08:07:53 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 08:07:55 info: Database connected successfully!
+2025-04-16 08:07:55 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 08:07:55 info: Database connected successfully!
+2025-04-16 08:08:13 info: ::1 - - [16/Apr/2025:07:08:13 +0000] "POST /api/vehicles HTTP/1.1" 500 189 "-" "PostmanRuntime/7.43.3"
+2025-04-16 08:10:59 info: ::1 - - [16/Apr/2025:07:10:59 +0000] "POST /api/vehicles HTTP/1.1" 500 189 "-" "PostmanRuntime/7.43.3"
+2025-04-16 13:22:58 info: ::1 - - [16/Apr/2025:12:22:58 +0000] "POST /api/vehicles HTTP/1.1" 400 78 "-" "PostmanRuntime/7.43.3"
+2025-04-16 13:23:09 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 13:23:35 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
+2025-04-16 13:42:50 info: =================================
+2025-04-16 13:42:50 info: ======= ENV: development =======
+2025-04-16 13:42:50 info: 🚀 App listening on the port 8000
+2025-04-16 13:42:50 info: =================================
+2025-04-16 13:42:53 info: Database connected successfully!
+2025-04-16 13:42:53 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 13:43:32 info: ::1 - - [16/Apr/2025:12:43:32 +0000] "POST /api/vehicles HTTP/1.1" 500 85 "-" "PostmanRuntime/7.43.3"
+2025-04-16 13:55:09 info: =================================
+2025-04-16 13:55:09 info: ======= ENV: development =======
+2025-04-16 13:55:09 info: 🚀 App listening on the port 8000
+2025-04-16 13:55:09 info: =================================
+2025-04-16 13:55:11 info: Database connected successfully!
+2025-04-16 13:55:11 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 13:55:47 info: ::1 - - [16/Apr/2025:12:55:47 +0000] "POST /api/vehicles HTTP/1.1" 201 450 "-" "PostmanRuntime/7.43.3"
+2025-04-16 13:58:22 info: =================================
+2025-04-16 13:58:22 info: ======= ENV: development =======
+2025-04-16 13:58:22 info: 🚀 App listening on the port 8000
+2025-04-16 13:58:22 info: =================================
+2025-04-16 13:58:26 info: Database connected successfully!
+2025-04-16 13:58:26 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 13:58:39 info: ::1 - - [16/Apr/2025:12:58:39 +0000] "POST /api/vehicles HTTP/1.1" 201 997 "-" "PostmanRuntime/7.43.3"
+2025-04-16 13:59:33 info: =================================
+2025-04-16 13:59:33 info: ======= ENV: development =======
+2025-04-16 13:59:33 info: 🚀 App listening on the port 8000
+2025-04-16 13:59:33 info: =================================
+2025-04-16 13:59:35 info: Database connected successfully!
+2025-04-16 13:59:35 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 15:57:26 info: ::1 - - [16/Apr/2025:14:57:26 +0000] "POST /api/trips HTTP/1.1" 404 31 "-" "PostmanRuntime/7.43.3"
+2025-04-16 15:58:34 info: ::1 - - [16/Apr/2025:14:58:34 +0000] "POST /api/trips HTTP/1.1" 201 500 "-" "PostmanRuntime/7.43.3"
+2025-04-16 18:46:24 info: =================================
+2025-04-16 18:46:24 info: ======= ENV: development =======
+2025-04-16 18:46:24 info: 🚀 App listening on the port 8000
+2025-04-16 18:46:24 info: =================================
+2025-04-16 18:46:27 info: Database connected successfully!
+2025-04-16 18:46:27 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 18:46:54 info: =================================
+2025-04-16 18:46:54 info: ======= ENV: development =======
+2025-04-16 18:46:54 info: 🚀 App listening on the port 8000
+2025-04-16 18:46:54 info: =================================
+2025-04-16 18:46:56 info: Database connected successfully!
+2025-04-16 18:46:56 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 18:47:04 info: =================================
+2025-04-16 18:47:04 info: ======= ENV: development =======
+2025-04-16 18:47:04 info: 🚀 App listening on the port 8000
+2025-04-16 18:47:04 info: =================================
+2025-04-16 18:47:07 info: Database connected successfully!
+2025-04-16 18:47:07 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 18:49:59 info: =================================
+2025-04-16 18:49:59 info: ======= ENV: development =======
+2025-04-16 18:49:59 info: 🚀 App listening on the port 8000
+2025-04-16 18:49:59 info: =================================
+2025-04-16 18:50:02 info: Database connected successfully!
+2025-04-16 18:50:02 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 18:50:11 info: =================================
+2025-04-16 18:50:11 info: ======= ENV: development =======
+2025-04-16 18:50:11 info: 🚀 App listening on the port 8000
+2025-04-16 18:50:11 info: =================================
+2025-04-16 18:50:13 info: Database connected successfully!
+2025-04-16 18:50:13 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 18:54:08 info: =================================
+2025-04-16 18:54:08 info: ======= ENV: development =======
+2025-04-16 18:54:08 info: 🚀 App listening on the port 8000
+2025-04-16 18:54:08 info: =================================
+2025-04-16 18:54:10 info: Database connected successfully!
+2025-04-16 18:54:10 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 18:55:32 info: ::1 - - [16/Apr/2025:17:55:32 +0000] "POST /api/create-user HTTP/1.1" 400 25 "-" "PostmanRuntime/7.43.3"
+2025-04-16 18:55:45 info: ::1 - - [16/Apr/2025:17:55:45 +0000] "POST /api/login HTTP/1.1" 200 270 "-" "PostmanRuntime/7.43.3"
+2025-04-16 18:56:00 info: ::1 - - [16/Apr/2025:17:56:00 +0000] "POST /api/create-user HTTP/1.1" 400 129 "-" "PostmanRuntime/7.43.3"
+2025-04-16 18:56:29 info: ::1 - - [16/Apr/2025:17:56:29 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 18:59:30 info: Received SIGINT. Shutting down server...
+2025-04-16 18:59:39 info: =================================
+2025-04-16 18:59:39 info: ======= ENV: development =======
+2025-04-16 18:59:39 info: 🚀 App listening on the port 8000
+2025-04-16 18:59:39 info: =================================
+2025-04-16 18:59:42 info: Database connected successfully!
+2025-04-16 18:59:42 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 18:59:54 info: ::1 - - [16/Apr/2025:17:59:54 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 19:09:23 info: =================================
+2025-04-16 19:09:23 info: ======= ENV: development =======
+2025-04-16 19:09:23 info: 🚀 App listening on the port 8000
+2025-04-16 19:09:23 info: =================================
+2025-04-16 19:09:25 info: Database connected successfully!
+2025-04-16 19:09:25 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 19:11:01 info: ::1 - - [16/Apr/2025:18:11:01 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 19:15:53 info: =================================
+2025-04-16 19:15:53 info: ======= ENV: development =======
+2025-04-16 19:15:53 info: 🚀 App listening on the port 8000
+2025-04-16 19:15:53 info: =================================
+2025-04-16 19:15:56 info: Database connected successfully!
+2025-04-16 19:15:56 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 19:15:57 info: Received SIGINT. Shutting down server...
+2025-04-16 19:16:05 info: =================================
+2025-04-16 19:16:05 info: ======= ENV: development =======
+2025-04-16 19:16:05 info: 🚀 App listening on the port 8000
+2025-04-16 19:16:05 info: =================================
+2025-04-16 19:16:07 info: Database connected successfully!
+2025-04-16 19:16:07 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 19:18:10 info: ::1 - - [16/Apr/2025:18:18:10 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 19:22:22 info: =================================
+2025-04-16 19:22:22 info: ======= ENV: development =======
+2025-04-16 19:22:22 info: 🚀 App listening on the port 8000
+2025-04-16 19:22:22 info: =================================
+2025-04-16 19:22:24 info: Database connected successfully!
+2025-04-16 19:22:24 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 21:05:29 info: ::1 - - [16/Apr/2025:20:05:29 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:06:48 info: ::1 - - [16/Apr/2025:20:06:48 +0000] "POST /api/update-password HTTP/1.1" 404 159 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:07:05 info: ::1 - - [16/Apr/2025:20:07:05 +0000] "PATCH /api/update-password HTTP/1.1" 400 27 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:10:43 info: ::1 - - [16/Apr/2025:20:10:43 +0000] "PATCH /api/update-password HTTP/1.1" 400 50 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:11:26 info: ::1 - - [16/Apr/2025:20:11:26 +0000] "PATCH /api/update-password HTTP/1.1" 400 50 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:27:05 info: ::1 - - [16/Apr/2025:20:27:05 +0000] "PATCH /api/update-password HTTP/1.1" 400 50 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:27:55 info: =================================
+2025-04-16 21:27:55 info: ======= ENV: development =======
+2025-04-16 21:27:55 info: 🚀 App listening on the port 8000
+2025-04-16 21:27:55 info: =================================
+2025-04-16 21:27:58 info: Database connected successfully!
+2025-04-16 21:27:58 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 21:28:45 info: ::1 - - [16/Apr/2025:20:28:45 +0000] "PATCH /api/update-password HTTP/1.1" 400 50 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:38:10 info: =================================
+2025-04-16 21:38:10 info: ======= ENV: development =======
+2025-04-16 21:38:10 info: 🚀 App listening on the port 8000
+2025-04-16 21:38:10 info: =================================
+2025-04-16 21:38:14 info: Database connected successfully!
+2025-04-16 21:38:14 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 21:38:45 info: =================================
+2025-04-16 21:38:45 info: ======= ENV: development =======
+2025-04-16 21:38:45 info: 🚀 App listening on the port 8000
+2025-04-16 21:38:45 info: =================================
+2025-04-16 21:38:48 info: Database connected successfully!
+2025-04-16 21:38:48 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 21:40:43 info: =================================
+2025-04-16 21:40:43 info: ======= ENV: development =======
+2025-04-16 21:40:43 info: 🚀 App listening on the port 8000
+2025-04-16 21:40:43 info: =================================
+2025-04-16 21:40:51 info: Database connected successfully!
+2025-04-16 21:40:51 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 21:41:55 info: =================================
+2025-04-16 21:41:55 info: ======= ENV: development =======
+2025-04-16 21:41:55 info: 🚀 App listening on the port 8000
+2025-04-16 21:41:55 info: =================================
+2025-04-16 21:41:58 info: Database connected successfully!
+2025-04-16 21:41:58 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 21:42:16 info: ::1 - - [16/Apr/2025:20:42:16 +0000] "PATCH /api/update-password HTTP/1.1" 400 39 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:43:50 info: ::1 - - [16/Apr/2025:20:43:50 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:45:50 info: ::1 - - [16/Apr/2025:20:45:50 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:46:27 info: ::1 - - [16/Apr/2025:20:46:27 +0000] "PATCH /api/update-password HTTP/1.1" 400 39 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:47:22 info: =================================
+2025-04-16 21:47:22 info: ======= ENV: development =======
+2025-04-16 21:47:22 info: 🚀 App listening on the port 8000
+2025-04-16 21:47:22 info: =================================
+2025-04-16 21:47:27 info: Database connected successfully!
+2025-04-16 21:47:27 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 21:47:38 info: ::1 - - [16/Apr/2025:20:47:38 +0000] "PATCH /api/update-password HTTP/1.1" 400 39 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:53:21 warn: API key missing
+2025-04-16 21:53:21 info: ::1 - - [16/Apr/2025:20:53:21 +0000] "POST /api/login HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:53:36 info: ::1 - - [16/Apr/2025:20:53:36 +0000] "POST /api/login HTTP/1.1" 200 272 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:53:57 info: ::1 - - [16/Apr/2025:20:53:57 +0000] "PATCH /api/update-password HTTP/1.1" 200 43 "-" "PostmanRuntime/7.43.3"
+2025-04-16 21:54:11 info: ::1 - - [16/Apr/2025:20:54:11 +0000] "POST /api/login HTTP/1.1" 200 272 "-" "PostmanRuntime/7.43.3"
+2025-04-16 22:30:10 info: =================================
+2025-04-16 22:30:10 info: ======= ENV: development =======
+2025-04-16 22:30:10 info: 🚀 App listening on the port 8000
+2025-04-16 22:30:10 info: =================================
+2025-04-16 22:30:15 info: Database connected successfully!
+2025-04-16 22:30:15 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 22:30:22 info: =================================
+2025-04-16 22:30:22 info: ======= ENV: development =======
+2025-04-16 22:30:22 info: 🚀 App listening on the port 8000
+2025-04-16 22:30:22 info: =================================
+2025-04-16 22:30:27 info: Database connected successfully!
+2025-04-16 22:30:27 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 22:32:38 info: =================================
+2025-04-16 22:32:38 info: ======= ENV: development =======
+2025-04-16 22:32:38 info: 🚀 App listening on the port 8000
+2025-04-16 22:32:38 info: =================================
+2025-04-16 22:32:41 info: Database connected successfully!
+2025-04-16 22:32:41 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 22:32:48 info: =================================
+2025-04-16 22:32:48 info: ======= ENV: development =======
+2025-04-16 22:32:48 info: 🚀 App listening on the port 8000
+2025-04-16 22:32:48 info: =================================
+2025-04-16 22:32:51 info: Database connected successfully!
+2025-04-16 22:32:51 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 22:33:02 info: =================================
+2025-04-16 22:33:02 info: ======= ENV: development =======
+2025-04-16 22:33:02 info: 🚀 App listening on the port 8000
+2025-04-16 22:33:02 info: =================================
+2025-04-16 22:33:07 info: Database connected successfully!
+2025-04-16 22:33:07 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 22:34:04 info: =================================
+2025-04-16 22:34:04 info: ======= ENV: development =======
+2025-04-16 22:34:04 info: 🚀 App listening on the port 8000
+2025-04-16 22:34:04 info: =================================
+2025-04-16 22:34:07 info: Database connected successfully!
+2025-04-16 22:34:07 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 22:38:14 info: =================================
+2025-04-16 22:38:14 info: ======= ENV: development =======
+2025-04-16 22:38:14 info: 🚀 App listening on the port 8000
+2025-04-16 22:38:14 info: =================================
+2025-04-16 22:38:17 info: Database connected successfully!
+2025-04-16 22:38:17 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 23:23:49 info: ::1 - - [16/Apr/2025:22:23:49 +0000] "POST /api/create-user HTTP/1.1" - - "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:24:05 info: =================================
+2025-04-16 23:24:05 info: ======= ENV: development =======
+2025-04-16 23:24:05 info: 🚀 App listening on the port 8000
+2025-04-16 23:24:05 info: =================================
+2025-04-16 23:24:15 info: Database connected successfully!
+2025-04-16 23:24:15 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-16 23:24:43 info: ::1 - - [16/Apr/2025:22:24:43 +0000] "POST /api/maintenance HTTP/1.1" 404 31 "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:25:39 info: ::1 - - [16/Apr/2025:22:25:39 +0000] "POST /api/maintenance HTTP/1.1" 404 31 "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:31:56 info: ::1 - - [16/Apr/2025:22:31:56 +0000] "POST /api/maintenance HTTP/1.1" 500 67 "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:34:07 info: ::1 - - [16/Apr/2025:22:34:07 +0000] "POST /api/maintenance HTTP/1.1" 500 29 "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:34:23 info: =================================
+2025-04-16 23:34:23 info: ======= ENV: development =======
+2025-04-16 23:34:23 info: 🚀 App listening on the port 8000
+2025-04-16 23:34:23 info: =================================
+2025-04-16 23:35:03 info: Database connected successfully!
+2025-04-16 23:35:03 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-16 23:41:31 info: =================================
+2025-04-16 23:41:31 info: ======= ENV: development =======
+2025-04-16 23:41:31 info: 🚀 App listening on the port 8000
+2025-04-16 23:41:31 info: =================================
+2025-04-16 23:41:33 info: Database connected successfully!
+2025-04-16 23:41:33 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-16 23:42:43 info: ::1 - - [16/Apr/2025:22:42:43 +0000] "POST /api/maintenance HTTP/1.1" 201 481 "-" "PostmanRuntime/7.43.3"
+2025-04-16 23:44:22 info: ::1 - - [16/Apr/2025:22:44:22 +0000] "POST /api/maintenance HTTP/1.1" 201 481 "-" "PostmanRuntime/7.43.3"

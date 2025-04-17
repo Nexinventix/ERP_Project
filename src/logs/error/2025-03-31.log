@@ -1,0 +1,70 @@
+2025-03-31 00:15:02 error: uncaughtException: Cannot find module '../utils/emailService'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\controllers\users.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+Error: Cannot find module '../utils/emailService'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\controllers\users.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1244:15)
+    at Function.Module._resolveFilename (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\controllers\users.ts:5:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+2025-03-31 00:16:34 error: uncaughtException: Route.patch() requires a callback function but got a [object Undefined]
+Error: Route.patch() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as patch] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as patch] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts:8:8)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-6038860267033666.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-6038860267033666.js:114:20)
+    at require.extensions.<computed> (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-6038860267033666.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\ts-node-dev\lib\hook.js:63:13)
+2025-03-31 00:16:41 error: uncaughtException: Cannot find module 'nodemailer'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\utils\emailService.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\controllers\users.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+Error: Cannot find module 'nodemailer'
+Require stack:
+- C:\Users\User\Desktop\Projects\ERP_Project\src\utils\emailService.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\controllers\users.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts
+- C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1244:15)
+    at Function.Module._resolveFilename (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\utils\emailService.ts:1:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+2025-03-31 18:56:02 error: uncaughtException: Route.put() requires a callback function but got a [object Undefined]
+Error: Route.put() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as put] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as put] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\routes\user.ts:17:8)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:114:20)
+    at require.extensions.<computed> (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-11157682538639224.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\ts-node-dev\lib\hook.js:63:13)

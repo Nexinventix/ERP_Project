@@ -1,0 +1,184 @@
+2025-04-07 11:06:44 info: =================================
+2025-04-07 11:06:44 info: ======= ENV: development =======
+2025-04-07 11:06:44 info: 🚀 App listening on the port 8000
+2025-04-07 11:06:44 info: =================================
+2025-04-07 11:06:52 info: Database connected successfully!
+2025-04-07 11:06:52 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 11:10:29 info: =================================
+2025-04-07 11:10:29 info: ======= ENV: development =======
+2025-04-07 11:10:29 info: 🚀 App listening on the port 8000
+2025-04-07 11:10:29 info: =================================
+2025-04-07 11:10:39 info: Database connected successfully!
+2025-04-07 11:10:39 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 11:14:50 info: =================================
+2025-04-07 11:14:50 info: ======= ENV: development =======
+2025-04-07 11:14:50 info: 🚀 App listening on the port 8000
+2025-04-07 11:14:50 info: =================================
+2025-04-07 11:14:56 info: Database connected successfully!
+2025-04-07 11:14:56 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 11:17:05 info: =================================
+2025-04-07 11:17:05 info: ======= ENV: development =======
+2025-04-07 11:17:05 info: 🚀 App listening on the port 8000
+2025-04-07 11:17:05 info: =================================
+2025-04-07 11:17:13 info: Database connected successfully!
+2025-04-07 11:17:13 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 11:18:39 info: =================================
+2025-04-07 11:18:39 info: ======= ENV: development =======
+2025-04-07 11:18:39 info: 🚀 App listening on the port 8000
+2025-04-07 11:18:39 info: =================================
+2025-04-07 11:18:47 info: =================================
+2025-04-07 11:18:47 info: ======= ENV: development =======
+2025-04-07 11:18:47 info: 🚀 App listening on the port 8000
+2025-04-07 11:18:47 info: =================================
+2025-04-07 11:18:52 info: Database connected successfully!
+2025-04-07 11:18:52 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 11:32:16 info: =================================
+2025-04-07 11:32:16 info: ======= ENV: development =======
+2025-04-07 11:32:16 info: 🚀 App listening on the port 8000
+2025-04-07 11:32:16 info: =================================
+2025-04-07 11:32:23 info: Database connected successfully!
+2025-04-07 11:32:23 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 11:46:36 info: =================================
+2025-04-07 11:46:36 info: ======= ENV: development =======
+2025-04-07 11:46:36 info: 🚀 App listening on the port 8000
+2025-04-07 11:46:36 info: =================================
+2025-04-07 11:46:38 info: Database connected successfully!
+2025-04-07 11:46:38 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 11:49:17 info: =================================
+2025-04-07 11:49:17 info: ======= ENV: development =======
+2025-04-07 11:49:17 info: 🚀 App listening on the port 8000
+2025-04-07 11:49:17 info: =================================
+2025-04-07 11:49:20 info: Database connected successfully!
+2025-04-07 11:49:20 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 11:52:21 info: =================================
+2025-04-07 11:52:21 info: ======= ENV: development =======
+2025-04-07 11:52:21 info: 🚀 App listening on the port 8000
+2025-04-07 11:52:21 info: =================================
+2025-04-07 11:52:23 info: Database connected successfully!
+2025-04-07 11:52:23 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 11:59:38 info: =================================
+2025-04-07 11:59:38 info: ======= ENV: development =======
+2025-04-07 11:59:38 info: 🚀 App listening on the port 8000
+2025-04-07 11:59:38 info: =================================
+2025-04-07 11:59:53 info: Database connected successfully!
+2025-04-07 11:59:53 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 12:00:01 info: =================================
+2025-04-07 12:00:01 info: ======= ENV: development =======
+2025-04-07 12:00:01 info: 🚀 App listening on the port 8000
+2025-04-07 12:00:01 info: =================================
+2025-04-07 12:00:03 info: Database connected successfully!
+2025-04-07 12:00:03 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 12:03:36 info: =================================
+2025-04-07 12:03:36 info: ======= ENV: development =======
+2025-04-07 12:03:36 info: 🚀 App listening on the port 8000
+2025-04-07 12:03:36 info: =================================
+2025-04-07 12:03:40 info: Database connected successfully!
+2025-04-07 12:03:40 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 12:18:47 warn: API key missing
+2025-04-07 12:18:47 info: ::1 - - [07/Apr/2025:11:18:47 +0000] "GET /api/users HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:20:03 warn: API key missing
+2025-04-07 12:20:03 info: ::1 - - [07/Apr/2025:11:20:03 +0000] "GET /api/users HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:20:40 info: Received SIGINT. Shutting down server...
+2025-04-07 12:20:46 info: =================================
+2025-04-07 12:20:46 info: ======= ENV: development =======
+2025-04-07 12:20:46 info: 🚀 App listening on the port 8000
+2025-04-07 12:20:46 info: =================================
+2025-04-07 12:20:49 info: Database connected successfully!
+2025-04-07 12:20:49 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 12:20:53 warn: API key missing
+2025-04-07 12:20:53 info: ::1 - - [07/Apr/2025:11:20:53 +0000] "GET /api/users HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:23:46 warn: Invalid API key attempt: API_KEY_1
+2025-04-07 12:23:46 info: ::1 - - [07/Apr/2025:11:23:46 +0000] "GET /api/users HTTP/1.1" 403 80 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:24:27 info: =================================
+2025-04-07 12:24:27 info: ======= ENV: development =======
+2025-04-07 12:24:27 info: 🚀 App listening on the port 8000
+2025-04-07 12:24:27 info: =================================
+2025-04-07 12:24:29 info: Database connected successfully!
+2025-04-07 12:24:29 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 12:25:33 info: =================================
+2025-04-07 12:25:33 info: ======= ENV: development =======
+2025-04-07 12:25:33 info: 🚀 App listening on the port 8000
+2025-04-07 12:25:33 info: =================================
+2025-04-07 12:25:35 info: Database connected successfully!
+2025-04-07 12:25:35 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 12:25:40 warn: Invalid API key attempt: API_KEY_1
+2025-04-07 12:25:40 info: ::1 - - [07/Apr/2025:11:25:40 +0000] "GET /api/users HTTP/1.1" 403 80 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:26:20 info: =================================
+2025-04-07 12:26:20 info: ======= ENV: development =======
+2025-04-07 12:26:20 info: 🚀 App listening on the port 8000
+2025-04-07 12:26:20 info: =================================
+2025-04-07 12:26:22 info: Database connected successfully!
+2025-04-07 12:26:22 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 12:28:46 info: =================================
+2025-04-07 12:28:46 info: ======= ENV: development =======
+2025-04-07 12:28:46 info: 🚀 App listening on the port 8000
+2025-04-07 12:28:46 info: =================================
+2025-04-07 12:28:48 info: Database connected successfully!
+2025-04-07 12:28:48 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-04-07 12:34:15 info: =================================
+2025-04-07 12:34:15 info: ======= ENV: development =======
+2025-04-07 12:34:15 info: 🚀 App listening on the port 8000
+2025-04-07 12:34:15 info: =================================
+2025-04-07 12:34:17 info: Database connected successfully!
+2025-04-07 12:34:17 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 12:34:26 warn: Invalid API key attempt. Received: API_KEY_1 | Valid keys: dreamWorksERP@2025,dreamWorksERP@2025@year
+2025-04-07 12:34:26 info: ::1 - - [07/Apr/2025:11:34:26 +0000] "GET /api/users HTTP/1.1" 403 80 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:35:18 info: ::1 - - [07/Apr/2025:11:35:18 +0000] "GET /api/users HTTP/1.1" 400 37 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:35:29 warn: API key missing
+2025-04-07 12:35:29 info: ::1 - - [07/Apr/2025:11:35:29 +0000] "POST /api/login HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:35:57 info: ::1 - - [07/Apr/2025:11:35:57 +0000] "POST /api/login HTTP/1.1" 404 28 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:40:20 info: ::1 - - [07/Apr/2025:11:40:20 +0000] "POST /api/signup-superadmin HTTP/1.1" 400 1146 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:40:47 info: ::1 - - [07/Apr/2025:11:40:47 +0000] "POST /api/signup-superadmin HTTP/1.1" 201 709 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:41:20 warn: API key missing
+2025-04-07 12:41:20 info: ::1 - - [07/Apr/2025:11:41:20 +0000] "POST /api/create-user HTTP/1.1" 401 98 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:41:42 info: ::1 - - [07/Apr/2025:11:41:42 +0000] "POST /api/create-user HTTP/1.1" 400 129 "-" "PostmanRuntime/7.43.3"
+2025-04-07 12:42:36 info: ::1 - - [07/Apr/2025:11:42:36 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:20:28 info: ::1 - - [07/Apr/2025:14:20:28 +0000] "GET /api/users HTTP/1.1" 400 37 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:20:38 info: ::1 - - [07/Apr/2025:14:20:38 +0000] "GET /api/users HTTP/1.1" 400 37 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:20:59 info: ::1 - - [07/Apr/2025:14:20:59 +0000] "GET /api/users HTTP/1.1" 400 28 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:21:14 info: ::1 - - [07/Apr/2025:14:21:14 +0000] "GET /api/users HTTP/1.1" 400 28 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:22:06 info: ::1 - - [07/Apr/2025:14:22:06 +0000] "GET /api/users HTTP/1.1" 200 675 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:22:18 info: ::1 - - [07/Apr/2025:14:22:18 +0000] "GET /api/users HTTP/1.1" 400 27 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:22:28 info: ::1 - - [07/Apr/2025:14:22:28 +0000] "GET /api/users HTTP/1.1" 200 675 "-" "PostmanRuntime/7.43.3"
+2025-04-07 15:23:17 info: =================================
+2025-04-07 15:23:17 info: ======= ENV: development =======
+2025-04-07 15:23:17 info: 🚀 App listening on the port 8000
+2025-04-07 15:23:17 info: =================================
+2025-04-07 15:23:27 info: Database connected successfully!
+2025-04-07 15:23:27 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 15:58:33 info: =================================
+2025-04-07 15:58:33 info: ======= ENV: development =======
+2025-04-07 15:58:33 info: 🚀 App listening on the port 8000
+2025-04-07 15:58:33 info: =================================
+2025-04-07 15:58:36 info: Database connected successfully!
+2025-04-07 15:58:36 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 15:58:49 info: =================================
+2025-04-07 15:58:49 info: ======= ENV: development =======
+2025-04-07 15:58:49 info: 🚀 App listening on the port 8000
+2025-04-07 15:58:49 info: =================================
+2025-04-07 15:58:51 info: Database connected successfully!
+2025-04-07 15:58:51 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 16:24:31 info: =================================
+2025-04-07 16:24:31 info: ======= ENV: development =======
+2025-04-07 16:24:31 info: 🚀 App listening on the port 8000
+2025-04-07 16:24:31 info: =================================
+2025-04-07 16:24:33 info: Database connected successfully!
+2025-04-07 16:24:33 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 16:25:12 info: =================================
+2025-04-07 16:25:12 info: ======= ENV: development =======
+2025-04-07 16:25:12 info: 🚀 App listening on the port 8000
+2025-04-07 16:25:12 info: =================================
+2025-04-07 16:25:15 info: Database connected successfully!
+2025-04-07 16:25:15 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-04-07 16:32:49 info: =================================
+2025-04-07 16:32:49 info: ======= ENV: development =======
+2025-04-07 16:32:49 info: 🚀 App listening on the port 8000
+2025-04-07 16:32:49 info: =================================
+2025-04-07 16:32:52 info: Database connected successfully!
+2025-04-07 16:32:52 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-07 16:37:39 info: =================================
+2025-04-07 16:37:39 info: ======= ENV: development =======
+2025-04-07 16:37:39 info: 🚀 App listening on the port 8000
+2025-04-07 16:37:39 info: =================================
+2025-04-07 16:37:41 info: Database connected successfully!
+2025-04-07 16:37:41 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net

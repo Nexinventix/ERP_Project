@@ -1,0 +1,13 @@
+2025-04-17 07:08:44 error: uncaughtException: listen EADDRINUSE: address already in use :::8000
+Error: listen EADDRINUSE: address already in use :::8000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\express\lib\application.js:635:24)
+    at Object.listen (C:\Users\User\Desktop\Projects\ERP_Project\src\app.ts:35:16)
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\server.ts:7:5)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-1896131913911936.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+2025-04-17 07:08:44 error: Server shutting down due to uncaught exception: listen EADDRINUSE: address already in use :::8000
