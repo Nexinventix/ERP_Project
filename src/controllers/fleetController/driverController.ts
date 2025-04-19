@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { Driver, Vehicle } from '@models/fleet';
 import { User } from '@models/users';
 import { uploadToCloudinary } from '@utils/cloudinary';
+import { ObjectId } from 'mongodb';
 
 interface AuthenticatedRequest extends Request {
   user: User;
@@ -80,7 +81,7 @@ class DriverController {
   // Assign driver to vehicle
   async assignToVehicle(req: AuthenticatedRequest, res: Response) {
     try {
-      const { driverId, vehicleId } = req.body;
+      const { driverId, vehicleId } = req.params;
 
       const driver = await Driver.findById(driverId);
       if (!driver) {
@@ -93,11 +94,11 @@ class DriverController {
       }
 
       // Update driver's assigned vehicle
-      driver.assignedVehicle = vehicleId;
+      driver.assignedVehicle = new ObjectId(vehicleId);
       await driver.save();
 
       // Update vehicle's current driver
-      vehicle.currentDriver = driverId;
+      vehicle.currentDriver = new ObjectId(driverId);
       await vehicle.save();
 
       res.json({ message: 'Driver assigned to vehicle successfully', driver, vehicle });
@@ -109,7 +110,7 @@ class DriverController {
   // Update driver status
   async updateDriverStatus(req: AuthenticatedRequest, res: Response) {
     try {
-      const { driverId, status } = req.body;
+      const { driverId, status } = req.params;
 
       if (!['available', 'on-trip', 'off-duty', 'suspended'].includes(status)) {
         return res.status(400).json({ message: 'Invalid status' });

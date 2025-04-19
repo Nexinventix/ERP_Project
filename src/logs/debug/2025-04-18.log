@@ -1,0 +1,40 @@
+2025-04-18 01:27:53 info: =================================
+2025-04-18 01:27:53 info: ======= ENV: development =======
+2025-04-18 01:27:53 info: 🚀 App listening on the port 8000
+2025-04-18 01:27:53 info: =================================
+2025-04-18 01:27:58 info: Database connected successfully!
+2025-04-18 01:27:58 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 01:55:55 info: =================================
+2025-04-18 01:55:55 info: ======= ENV: development =======
+2025-04-18 01:55:55 info: 🚀 App listening on the port 8000
+2025-04-18 01:55:55 info: =================================
+2025-04-18 01:56:00 info: Database connected successfully!
+2025-04-18 01:56:00 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 01:56:59 info: =================================
+2025-04-18 01:56:59 info: ======= ENV: development =======
+2025-04-18 01:56:59 info: 🚀 App listening on the port 8000
+2025-04-18 01:56:59 info: =================================
+2025-04-18 01:57:07 info: Database connected successfully!
+2025-04-18 01:57:07 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 02:00:27 info: ::1 - - [18/Apr/2025:01:00:27 +0000] "PATCH /api/drivers/67ff51b648674b0b4906a17b/67ffa97f7d5bc64899ec66d4 HTTP/1.1" 404 30 "-" "PostmanRuntime/7.43.3"
+2025-04-18 02:01:08 info: ::1 - - [18/Apr/2025:01:01:08 +0000] "PATCH /api/drivers/67ff51b648674b0b4906a17b/67ffa97f7d5bc64899ec66d4 HTTP/1.1" 404 30 "-" "PostmanRuntime/7.43.3"
+2025-04-18 02:02:13 info: =================================
+2025-04-18 02:02:13 info: ======= ENV: development =======
+2025-04-18 02:02:13 info: 🚀 App listening on the port 8000
+2025-04-18 02:02:13 info: =================================
+2025-04-18 02:02:18 info: Database connected successfully!
+2025-04-18 02:02:18 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 02:04:04 info: =================================
+2025-04-18 02:04:04 info: ======= ENV: development =======
+2025-04-18 02:04:04 info: 🚀 App listening on the port 8000
+2025-04-18 02:04:04 info: =================================
+2025-04-18 02:04:09 info: Database connected successfully!
+2025-04-18 02:04:09 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 02:04:26 info: ::1 - - [18/Apr/2025:01:04:26 +0000] "PATCH /api/drivers/67ff51b648674b0b4906a17b/67ffa97f7d5bc64899ec66d4 HTTP/1.1" 200 2112 "-" "PostmanRuntime/7.43.3"
+2025-04-18 02:06:37 info: =================================
+2025-04-18 02:06:37 info: ======= ENV: development =======
+2025-04-18 02:06:37 info: 🚀 App listening on the port 8000
+2025-04-18 02:06:37 info: =================================
+2025-04-18 02:06:45 info: Database connected successfully!
+2025-04-18 02:06:45 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-18 02:06:52 info: ::1 - - [18/Apr/2025:01:06:52 +0000] "POST /api/login HTTP/1.1" 200 429 "-" "PostmanRuntime/7.43.3"

@@ -149,7 +149,7 @@ class UserController {
         expiresIn: '7d',
       });
 
-      res.json({ message: 'Login successful', token });
+      res.json({ message: 'Login successful', token , user: { id: user._id, firstName: user.firstName, lastName: user.lastName, email: user.email, isSuperAdmin: user.isSuperAdmin, isAdministrator: user.isAdministrator }});
     } catch (error) {
       if (error instanceof Error) {
         res.status(400).json({ message: error.message });
