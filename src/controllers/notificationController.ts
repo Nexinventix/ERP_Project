@@ -11,7 +11,8 @@ export const markAsRead = async (req: Request, res: Response) => {
       { new: true }
     );
     if (!notification) {
-      return res.status(404).json({ message: 'Notification not found' });
+      res.status(404).json({ message: 'Notification not found' });
+      return;
     }
     res.json({ message: 'Notification marked as read', notification });
   } catch (error) {
@@ -51,7 +52,8 @@ export const deleteNotification = async (req: Request, res: Response) => {
     const { notificationId } = req.params;
     const deleted = await Notification.findByIdAndDelete(notificationId);
     if (!deleted) {
-      return res.status(404).json({ message: 'Notification not found' });
+      res.status(404).json({ message: 'Notification not found' });
+      return;
     }
     res.json({ message: 'Notification deleted successfully' });
   } catch (error) {
