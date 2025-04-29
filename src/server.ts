@@ -1,6 +1,6 @@
-import App from '@/app'
-import { logger } from '@utils/logger'
-import route from '@/routes/user';
+import App from './app'
+import { logger } from './utils/logger'
+import route from './routes/user';
 
 
 // const app = App()
