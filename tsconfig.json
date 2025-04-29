@@ -9,6 +9,7 @@
     "baseUrl": "./src",
     "allowJs": true,
     "strictPropertyInitialization":true,
+    "outDir": "./dist",
     "paths": {
       "@/*": ["*"],
       "@config": ["./config"],
