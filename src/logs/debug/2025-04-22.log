@@ -1,0 +1,7 @@
+2025-04-22 15:48:34 info: =================================
+2025-04-22 15:48:34 info: ======= ENV: development =======
+2025-04-22 15:48:34 info: 🚀 App listening on the port 8000
+2025-04-22 15:48:34 info: =================================
+2025-04-22 15:48:38 info: Database connected successfully!
+2025-04-22 15:48:38 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-22 15:48:46 info: ::1 - - [22/Apr/2025:14:48:46 +0000] "POST /api/login HTTP/1.1" 200 425 "-" "PostmanRuntime/7.43.3"
