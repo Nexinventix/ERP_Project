@@ -39,18 +39,16 @@ const App = {
             console.log(`Server running on port ${this.port}`);
             if (typeof logger !== 'undefined') {
                 logger.info(`Server running on port ${this.port}`);
+                logger.info(`=================================`);
+                logger.info(`======= ENV: ${this.env} =======`);
+                logger.info(`🚀 App listening on the port ${this.port}`);
+                logger.info(`=================================`);
             }
         });
     } catch (err) {
         console.error('Error starting server:', err);
         throw err;
     }
-      this.app.listen(this.port, () => {
-         logger.info(`=================================`)
-         logger.info(`======= ENV: ${this.env} =======`)
-         logger.info(`🚀 App listening on the port ${this.port}`)
-         logger.info(`=================================`)
-      })
    },
 
    async closeDatabaseConnection() {
@@ -148,4 +146,4 @@ const App = {
 App.initialize()
 scheduleMaintenanceAlerts();
 
-export default App
+export default App;

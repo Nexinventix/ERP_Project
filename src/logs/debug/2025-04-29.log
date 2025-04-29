@@ -18,3 +18,11 @@
 2025-04-29 20:29:17 info: Database connected successfully!
 2025-04-29 20:29:17 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
 2025-04-29 20:35:52 info: Received SIGINT. Shutting down server...
+2025-04-29 20:56:31 info: Server running on port 8000
+2025-04-29 20:56:31 info: =================================
+2025-04-29 20:56:31 info: ======= ENV: development =======
+2025-04-29 20:56:31 info: 🚀 App listening on the port 8000
+2025-04-29 20:56:31 info: =================================
+2025-04-29 20:56:36 info: Database connected successfully!
+2025-04-29 20:56:36 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-04-29 20:56:42 info: Received SIGINT. Shutting down server...
