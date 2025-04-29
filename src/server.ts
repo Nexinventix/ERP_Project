@@ -1,10 +1,19 @@
+console.log('Starting ERP_Project server...');
+console.log('ENV:', process.env);
+
 import App from './app'
 import { logger } from './utils/logger'
 import route from './routes/user';
 
-
-// const app = App()
-App.listen()
+try {
+  // Ensure the app listens on the correct port
+  const port = process.env.PORT || 5000;
+  App.port = port;
+  App.listen();
+} catch (err) {
+  console.error('Startup error:', err);
+  process.exit(1);
+}
 
 async function shutdownServer(signal: string) {
    try {
