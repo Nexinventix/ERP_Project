@@ -1,13 +1,13 @@
 import express, { Application } from 'express'
 import cookieParser from 'cookie-parser'
-import { PORT, NODE_ENV } from '@config'
+import { PORT, NODE_ENV } from './config'
 import morgan from 'morgan'
 import cors from 'cors'
-import { logger, stream } from '@utils/logger'
-import { dbConnect } from '@databases'
+import { logger, stream } from './utils/logger'
+import { dbConnect } from './database'
 import helmet from 'helmet'
 import { set, connect, disconnect } from 'mongoose'
-import { apiKeyMiddleware } from '@middlewares/apiKey';
+import { apiKeyMiddleware } from './middlewares/apiKey';
 import { scheduleMaintenanceAlerts } from './cron/maintenanceJob';
 import userRouter from './routes/user'
 import fleetRouter from './routes/fleet'

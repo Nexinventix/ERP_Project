@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { deleteNotification, getNotifications, markAsRead, markAllAsRead, getUnreadNotifications } from '@controllers/notificationController';
+import { deleteNotification, getNotifications, markAsRead, markAllAsRead, getUnreadNotifications } from '../controllers/notificationController';
 
 const router = Router();
 

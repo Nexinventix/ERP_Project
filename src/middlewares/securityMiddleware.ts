@@ -41,7 +41,7 @@ export const validateVehicleInput: RequestHandler[] = [
 
 // Validation middleware for vehicle assignment
 import { param } from 'express-validator';
-import { Department } from '@models/fleet';
+import { Department } from '../models/fleet';
 
 export const validateAssignVehicle: RequestHandler[] = [
     param('vehicleId').isMongoId().withMessage('Invalid vehicle ID'),

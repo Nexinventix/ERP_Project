@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
-import { logger } from '@utils/logger';
+import { logger } from '../utils/logger';
 
 import {
     API_KEY_1, 
     API_KEY_2 
- } from '@config'
+ } from '../config'
 
  const API_KEYS = new Set([
     API_KEY_1, // Store keys in environment variables

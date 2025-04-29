@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import {
   EMAIL_USER,
   EMAIL_PASS
-} from '@config'
+} from '../config'
 
 export const sendEmail = async (
   to: string,

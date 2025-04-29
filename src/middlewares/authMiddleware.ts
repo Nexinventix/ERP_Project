@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import Users, {User} from '../models/users';
 import {
     SECRET_KEY
- } from '@config'
+ } from '../config'
 
 interface AuthenticatedRequest extends Request {
     user: User;

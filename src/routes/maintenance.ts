@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { AuthenticatedRequestHandler } from '../types/express';
-import { authMiddleware } from '@middlewares/authMiddleware';
-import MaintenanceController from '@controllers/fleetController/maintenanceController';
+import { authMiddleware } from '../middlewares/authMiddleware';
+import MaintenanceController from '../controllers/fleetController/maintenanceController';
 
 const router = Router();
 

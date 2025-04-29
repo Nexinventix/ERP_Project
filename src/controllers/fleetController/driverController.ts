@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { Driver, Vehicle } from '@models/fleet';
-import { User } from '@models/users';
-import { uploadToCloudinary } from '@utils/cloudinary';
+import { Driver, Vehicle } from '../../models/fleet';
+import { User } from '../../models/users';
+import { uploadToCloudinary } from '../../utils/cloudinary';
 import { ObjectId } from 'mongodb';
 
 interface AuthenticatedRequest extends Request {

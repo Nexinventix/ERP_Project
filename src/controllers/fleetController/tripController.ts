@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { Trip, Driver, Vehicle } from '@models/fleet';
-import { User } from '@models/users';
+import { Trip, Driver, Vehicle } from '../../models/fleet';
+import { User } from '../../models/users';
 
 interface AuthenticatedRequest extends Request {
   user: User;
