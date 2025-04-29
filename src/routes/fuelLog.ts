@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { AuthenticatedRequestHandler } from '../types/express';
-import { authMiddleware } from '@middlewares/authMiddleware';
-import FuelLogController from '@controllers/fleetController/fuelLogController';
+import { authMiddleware } from '../middlewares/authMiddleware';
+import FuelLogController from '../controllers/fleetController/fuelLogController';
 
 const router = Router();
 

@@ -1,7 +1,7 @@
 import { Request, Response, RequestHandler, NextFunction } from 'express';
-import { Vehicle, VehicleType, Department, ICertification } from '@models/fleet';
-import { User } from '@models/users';
-import { uploadToCloudinary } from '@utils/cloudinary';
+import { Vehicle, VehicleType, Department, ICertification } from '../../models/fleet';
+import { User } from '../../models/users';
+import { uploadToCloudinary } from '../../utils/cloudinary';
 import multer from 'multer';
 
 interface MulterRequest extends Request {

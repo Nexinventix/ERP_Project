@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import Users, { User, Module, Department } from '../models/users';
-import { sendEmail } from '@utils/emailService'; // Placeholder for email function
+import { sendEmail } from '../utils/emailService'; // Placeholder for email function
 import {
     SECRET_KEY
- } from '@config'
+ } from '../config'
 
 interface AuthenticatedRequest extends Request {
   user: User;

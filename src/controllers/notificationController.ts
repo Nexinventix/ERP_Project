@@ -1,4 +1,4 @@
-import Notification from '@models/notification';
+import Notification from '../models/notification';
 import { Request, Response } from 'express';
 
 // Mark a notification as read

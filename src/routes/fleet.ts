@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { authMiddleware } from '@middlewares/authMiddleware';
-import FleetController from '@controllers/fleetController/fleetSetUpConfig';
-import { validateVehicleInput, validateAssignVehicle, validateVehicleStatus } from '@middlewares/securityMiddleware';
-import { upload } from '@utils/multer';
+import { authMiddleware } from '../middlewares/authMiddleware';
+import FleetController from '../controllers/fleetController/fleetSetUpConfig';
+import { validateVehicleInput, validateAssignVehicle, validateVehicleStatus } from '../middlewares/securityMiddleware';
+import { upload } from '../utils/multer';
 
 const router = Router();
 

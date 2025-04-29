@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import multer from 'multer';
 import { AuthenticatedRequestHandler } from '../types/express';
-import { authMiddleware } from '@middlewares/authMiddleware';
-import DriverController from '@controllers/fleetController/driverController';
+import { authMiddleware } from '../middlewares/authMiddleware';
+import DriverController from '../controllers/fleetController/driverController';
 
 const router = Router();
 const upload = multer({ dest: 'uploads/' });
