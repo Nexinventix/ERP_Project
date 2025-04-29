@@ -15,6 +15,16 @@ try {
   process.exit(1);
 }
 
+process.on('exit', (code) => {
+  console.log('Process exiting with code:', code);
+});
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+});
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection:', reason);
+});
+
 async function shutdownServer(signal: string) {
    try {
       logger.info(`Received ${signal}. Shutting down server...`)

@@ -23,6 +23,7 @@ const App = {
    env: NODE_ENV || 'development',
 
    initialize() {
+    console.log('App.initialize() called');
       //this function automatic run
       this.initializeMiddlewares()
       this.connectToDatabase()
@@ -32,6 +33,18 @@ const App = {
    },
 
    listen() {
+    console.log('App.listen() called');
+    try {
+        this.app.listen(this.port, () => {
+            console.log(`Server running on port ${this.port}`);
+            if (typeof logger !== 'undefined') {
+                logger.info(`Server running on port ${this.port}`);
+            }
+        });
+    } catch (err) {
+        console.error('Error starting server:', err);
+        throw err;
+    }
       this.app.listen(this.port, () => {
          logger.info(`=================================`)
          logger.info(`======= ENV: ${this.env} =======`)
@@ -50,6 +63,7 @@ const App = {
    },
 
    async connectToDatabase() {
+    console.log('App.connectToDatabase() called');
       if (this.env !== 'production') {
          set('debug', true)
       }
