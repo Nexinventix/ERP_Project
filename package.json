@@ -8,7 +8,7 @@
     "lint": "eslint --ignore-pattern .gitignore --ignore-pattern temp.js --ignore-pattern config/* --ignore-pattern node_modules/* src/**/*.ts",
     "lint:fix": "eslint --ext .ts src/ --fix",
     "format": "prettier --write 'src/**/*.{js,ts,json,md}'",
-    "start": "cross-env NODE_ENV=production ts-node --transpile-only -r tsconfig-paths/register src/server.ts",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
     "dev": "nodemon",
     "build": "tsc"
   },

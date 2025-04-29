@@ -32,7 +32,7 @@
 - Ensure your database and services are accessible from Railway.
 - Railway redeploys on git push.
 - For custom build/start commands, set them in the Railway dashboard (e.g., `npm run build` and `npm start`).
-
+URL - erpproject-production-8c62.up.railway.app
 ---
 For further help, see the official docs:
 - [Render Node Guide](https://render.com/docs/deploy-node-express-app)
