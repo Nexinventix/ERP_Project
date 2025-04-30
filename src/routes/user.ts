@@ -1,5 +1,10 @@
-import { authMiddleware } from "@/middlewares/authMiddleware";
-import UserController from "@controllers/users"
+console.log('DEBUG: Top of user.ts, before any imports');
+
+import { authMiddleware } from "../middlewares/authMiddleware";
+console.log('DEBUG: Imported authMiddleware in user.ts');
+
+import UserController from "../controllers/users";
+console.log('DEBUG: Imported UserController in user.ts');
 
 const express = require('express')
 const router = express.Router()

@@ -1,5 +1,7 @@
-console.log('Starting ERP_Project server...');
-console.log('ENV:', process.env);
+console.log('DEBUG: Top of server.ts, before imports');
+console.log('DEBUG: Server starting...');
+// console.log('Starting ERP_Project server...');
+// console.log('ENV:', process.env);
 
 import App from './app'
 import { logger } from './utils/logger'
@@ -8,8 +10,11 @@ import route from './routes/user';
 try {
   // Ensure the app listens on the correct port
   const port = process.env.PORT || 5000;
+  console.log('DEBUG: Before setting App.port');
   App.port = port;
+  console.log('DEBUG: After setting App.port, before App.listen()');
   App.listen();
+  console.log('DEBUG: After App.listen()');
 } catch (err) {
   console.error('Startup error:', err);
   process.exit(1);
