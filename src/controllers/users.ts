@@ -84,7 +84,7 @@ class UserController {
 
       // Send email notification (HTML and plain text)
       const plainText = `Hello ${firstName},\r\n\r\nWelcome to DreamWorks ERP!\r\n\r\nYour account has been successfully created.\r\n\r\nEmail: ${email}\r\nTemporary Password: ${tempPassword}\r\n\r\nFor your security, please log in as soon as possible and update your password.\r\n\r\nIf you have any questions or need assistance, feel free to reply to this email.\r\n\r\nBest regards,\r\nThe DreamWorks ERP Team`;
-      const { generateAccountCreatedEmailHTML } = await import('@utils/emailService');
+      const { generateAccountCreatedEmailHTML } = await import('../utils/emailService');
       const html = generateAccountCreatedEmailHTML(firstName, email, tempPassword);
       await sendEmail(email, 'Your Account Has Been Created', plainText, html);
 
