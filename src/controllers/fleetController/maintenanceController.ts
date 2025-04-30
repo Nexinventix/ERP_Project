@@ -132,7 +132,7 @@ class MaintenanceController {
       }).populate('vehicle');
 
       // Create notifications for each due maintenance
-      const Notification = (await import('@models/notification')).default;
+      const Notification = (await import('../../models/notification')).default;
       for (const maintenance of dueMaintenance) {
         if (maintenance.vehicle && maintenance.vehicle._id) {
           // Safe access for plateNumber
