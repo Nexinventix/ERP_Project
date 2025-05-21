@@ -1,39 +1,39 @@
-console.log('DEBUG: Top of app.ts, before any imports');
+// console.log('DEBUG: Top of app.ts, before any imports');
 
-console.log('DEBUG: Importing express');
+// console.log('DEBUG: Importing express');
 import express, { Application } from 'express'
-console.log('DEBUG: Importing cookieParser');
+// console.log('DEBUG: Importing cookieParser');
 import cookieParser from 'cookie-parser'
-console.log('DEBUG: Importing config');
+// console.log('DEBUG: Importing config');
 import { PORT, NODE_ENV } from './config'
-console.log('DEBUG: Importing morgan');
+// console.log('DEBUG: Importing morgan');
 import morgan from 'morgan'
-console.log('DEBUG: Importing cors');
+// console.log('DEBUG: Importing cors');
 import cors from 'cors'
-console.log('DEBUG: Importing logger and stream');
+// console.log('DEBUG: Importing logger and stream');
 import { logger, stream } from './utils/logger'
-console.log('DEBUG: Importing dbConnect');
+// console.log('DEBUG: Importing dbConnect');
 import { dbConnect } from './database'
-console.log('DEBUG: Importing helmet');
+// console.log('DEBUG: Importing helmet');
 import helmet from 'helmet'
-console.log('DEBUG: Importing mongoose');
+// console.log('DEBUG: Importing mongoose');
 import { set, connect, disconnect } from 'mongoose'
-console.log('DEBUG: Importing apiKeyMiddleware');
+// console.log('DEBUG: Importing apiKeyMiddleware');
 import { apiKeyMiddleware } from './middlewares/apiKey';
-console.log('DEBUG: Importing scheduleMaintenanceAlerts');
+// console.log('DEBUG: Importing scheduleMaintenanceAlerts');
 import { scheduleMaintenanceAlerts } from './cron/maintenanceJob';
-console.log('DEBUG: Importing routers');
-console.log('DEBUG: Importing userRouter');
+// console.log('DEBUG: Importing routers');
+// console.log('DEBUG: Importing userRouter');
 import userRouter from './routes/user'
-console.log('DEBUG: Importing fleetRouter');
+// console.log('DEBUG: Importing fleetRouter');
 import fleetRouter from './routes/fleet'
-console.log('DEBUG: Importing maintenanceRouter');
+// console.log('DEBUG: Importing maintenanceRouter');
 import maintenanceRouter from './routes/maintenance'
-console.log('DEBUG: Importing driverRouter');
+// console.log('DEBUG: Importing driverRouter');
 import driverRouter from './routes/driver'
-console.log('DEBUG: Importing tripRouter');
+// console.log('DEBUG: Importing tripRouter');
 import tripRouter from './routes/trip'
-console.log('DEBUG: Importing fuelLogRouter');
+// console.log('DEBUG: Importing fuelLogRouter');
 import fuelLogRouter from './routes/fuelLog'
 // import certificationRouter from './routes/certification'
 
@@ -43,20 +43,20 @@ const App = {
    env: NODE_ENV || 'development',
 
    initialize() {
-    console.log('DEBUG: App.initialize() called');
+   //  console.log('DEBUG: App.initialize() called');
       //this function automatic run
       this.initializeMiddlewares()
-      console.log('DEBUG: After initializeMiddlewares');
+   //  console.log('DEBUG: After initializeMiddlewares');
       this.connectToDatabase()
-      console.log('DEBUG: After connectToDatabase');
+   //  console.log('DEBUG: After connectToDatabase');
       this.initializeRoutes()
-      console.log('DEBUG: After initializeRoutes');
+   //  console.log('DEBUG: After initializeRoutes');
       // this.initializeErrorHandling()
       
    },
 
    listen() {
-    console.log('DEBUG: App.listen() called');
+   //  console.log('DEBUG: App.listen() called');
     try {
         this.app.listen(this.port, () => {
             console.log(`Server running on port ${this.port}`);
@@ -84,7 +84,7 @@ const App = {
    },
 
    async connectToDatabase() {
-    console.log('App.connectToDatabase() called');
+   //  console.log('App.connectToDatabase() called');
       if (this.env !== 'production') {
          set('debug', true)
       }
@@ -121,7 +121,7 @@ const App = {
 
       // CORS configuration
       this.app.use(cors({
-         origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+         origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000','https://dreamwork-test.vercel.app/'],
          methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
          allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
          credentials: true,
