@@ -120,13 +120,31 @@ const App = {
       }))
 
       // CORS configuration
+      const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,https://dreamwork-test.vercel.app')
+      .split(',')
+      .map(origin => origin.trim().replace(/\/$/, '')); // remove trailing slash
+
       this.app.use(cors({
-         origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000','https://dreamwork-test.vercel.app/'],
-         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-         allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
-         credentials: true,
-         maxAge: 600 // 10 minutes
-      }))
+      origin: (origin, callback) => {
+         if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+         } else {
+            callback(new Error(`CORS policy does not allow access from origin: ${origin}`));
+         }
+      },
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
+      credentials: true,
+      maxAge: 600
+      }));
+
+      // this.app.use(cors({
+      //    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000','https://dreamwork-test.vercel.app/'],
+      //    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+      //    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
+      //    credentials: true,
+      //    maxAge: 600 // 10 minutes
+      // }))
 
       // Body parsing
       this.app.use(express.json({ limit: '10kb' })) // Limit body size
