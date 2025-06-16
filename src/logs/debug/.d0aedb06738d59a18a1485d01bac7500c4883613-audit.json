@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\debug\\.d0aedb06738d59a18a1485d01bac7500c4883613-audit.json",
+    "files": [
+        {
+            "date": 1748894015316,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\debug\\2025-06-02.log",
+            "hash": "4844942db9ebbc68d9d535a9a10aa92efb1cb4d12bfbc23dad358d9ae13d6d3a"
+        },
+        {
+            "date": 1749208250716,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\debug\\2025-06-06.log",
+            "hash": "c02bde6c6c3794b3b0d500feeff1217c935ab3cdcd54dd9b1611ebcb4c9ae935"
+        },
+        {
+            "date": 1749825602682,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\debug\\2025-06-13.log",
+            "hash": "37d9d44ad04d52a5c5d07177117d2d8aebd97fed3ca86987ca8a46a6f0feea39"
+        },
+        {
+            "date": 1750085674893,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\debug\\2025-06-16.log",
+            "hash": "8ac4edef2a26b9351b8ca520a67816d9da6c1645228ccc9e2b49fd8f9540a3b7"
+        }
+    ],
+    "hashType": "sha256"
+}

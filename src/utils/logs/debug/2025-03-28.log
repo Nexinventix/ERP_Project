@@ -1,0 +1,48 @@
+2025-03-28 11:02:17 info: =================================
+2025-03-28 11:02:17 info: ======= ENV: development =======
+2025-03-28 11:02:17 info: 🚀 App listening onn the port 5000
+2025-03-28 11:02:17 info: =================================
+2025-03-28 11:02:22 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 11:02:26 info: Received SIGINT. Shutting down server...
+2025-03-28 14:04:52 info: =================================
+2025-03-28 14:04:52 info: ======= ENV: development =======
+2025-03-28 14:04:52 info: 🚀 App listening onn the port 5000
+2025-03-28 14:04:52 info: =================================
+2025-03-28 14:04:56 info: Database connecteD successfully!
+2025-03-28 14:04:56 info: MongoDBcf connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-03-28 14:05:10 info: =================================
+2025-03-28 14:05:10 info: ======= ENV: development =======
+2025-03-28 14:05:10 info: 🚀 App listening onn the port 5000
+2025-03-28 14:05:10 info: =================================
+2025-03-28 14:05:13 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:05:44 info: =================================
+2025-03-28 14:05:44 info: ======= ENV: development =======
+2025-03-28 14:05:44 info: 🚀 App listening onn the port 5000
+2025-03-28 14:05:44 info: =================================
+2025-03-28 14:05:49 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:06:51 info: =================================
+2025-03-28 14:06:51 info: ======= ENV: development =======
+2025-03-28 14:06:51 info: 🚀 App listening onn the port 5000
+2025-03-28 14:06:51 info: =================================
+2025-03-28 14:06:54 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:14:59 info: =================================
+2025-03-28 14:14:59 info: ======= ENV: development =======
+2025-03-28 14:14:59 info: 🚀 App listening onn the port 5000
+2025-03-28 14:14:59 info: =================================
+2025-03-28 14:15:03 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:47:30 info: =================================
+2025-03-28 14:47:30 info: ======= ENV: developments =======
+2025-03-28 14:47:30 info: 🚀 App listening on the port 5000
+2025-03-28 14:47:30 info: =================================
+2025-03-28 14:47:32 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:47:54 info: =================================
+2025-03-28 14:47:54 info: ======= ENV: developments =======
+2025-03-28 14:47:54 info: 🚀 App listening on the port 5000
+2025-03-28 14:47:54 info: =================================
+2025-03-28 14:47:56 info: Error connecting to the database:op bad auth : Authentication failed.
+2025-03-28 14:47:58 info: Received SIGINT. Shutting down server...
+2025-03-28 14:48:03 info: =================================
+2025-03-28 14:48:03 info: ======= ENV: developmentor =======
+2025-03-28 14:48:03 info: 🚀 App listening on the port 5000
+2025-03-28 14:48:03 info: =================================
+2025-03-28 14:48:06 info: Received SIGINT. Shutting down server...

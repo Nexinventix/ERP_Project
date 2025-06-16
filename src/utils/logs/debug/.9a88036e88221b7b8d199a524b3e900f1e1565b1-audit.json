@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\utils\\logs \\debug\\.9a88036e88221b7b8d199a524b3e900f1e1565b1-audit.json",
+    "files": [
+        {
+            "date": 1743156136254,
+            "name": "C:\\Users\\User\\Desktop\\Projects\\ERP_Project\\src\\utils\\logs \\debug\\2025-03-28.log",
+            "hash": "ac509a53d566e706264c0e85a36dcefe8f52da2b238ed1d2386658c59ad37f7e"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,16 @@
+2025-03-28 14:06:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+src/database/index.ts(11,11): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/database/index.ts(11,11): error TS1005: ',' expected.
+
+    at Object.<anonymous> (C:\Users\User\Desktop\Projects\ERP_Project\src\database\index.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1562:14)
+    at Module._compile (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-09413191669671006.js:69:33)
+    at node:internal/modules/cjs/loader:1699:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-09413191669671006.js:114:20)
+    at require.extensions.<computed> (C:\Users\User\AppData\Local\Temp\ts-node-dev-hook-09413191669671006.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\User\Desktop\Projects\ERP_Project\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1313:32)
+    at Function._load (node:internal/modules/cjs/loader:1123:12)
