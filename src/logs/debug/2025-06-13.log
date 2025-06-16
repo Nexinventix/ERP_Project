@@ -1,0 +1,7 @@
+2025-06-13 15:40:06 info: Server running on port 8000
+2025-06-13 15:40:06 info: =================================
+2025-06-13 15:40:06 info: ======= ENV: development =======
+2025-06-13 15:40:06 info: 🚀 App listening on the port 8000
+2025-06-13 15:40:06 info: =================================
+2025-06-13 15:40:10 info: Database connected successfully!
+2025-06-13 15:40:10 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net

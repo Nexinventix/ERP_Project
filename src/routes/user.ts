@@ -1,31 +1,33 @@
-console.log('DEBUG: Top of user.ts, before any imports');
 
 import { authMiddleware } from "../middlewares/authMiddleware";
-console.log('DEBUG: Imported authMiddleware in user.ts');
-
 import UserController from "../controllers/users";
-console.log('DEBUG: Imported UserController in user.ts');
+// import { permissionMiddleware } from "../middlewares/permission.middleware";
+// import { Permission } from "../models/users";
 
 const express = require('express')
 const router = express.Router()
 
-router.post('/login', UserController.login);
-router.patch('/update-password', authMiddleware, UserController.updatePassword);
 
-// Super Admin Routes
-router.post('/create-user', authMiddleware, UserController.createUser);
-router.post('/create-superadmin', authMiddleware, UserController.createSuperAdmin);
-router.get('/users', authMiddleware, UserController.getAllUsers);
+router.post('/login', UserController.login);
 router.post('/signup-superadmin', UserController.signupSuperAdmin);
 
-// New Super Admin Features
-router.patch('/update-user/:userId', authMiddleware, UserController.updateUser);
-router.delete('/delete-user/:userId', authMiddleware, UserController.deleteUser);
-router.patch('/grant-permissions/:userId', authMiddleware, UserController.grantPermission);
-router.patch('/revoke-permissions/:userId', authMiddleware, UserController.revokePermission);
+router.use(authMiddleware)
+router.patch('/update-password', UserController.updatePassword);
 
-router.patch('/make-admin/:userId', authMiddleware, UserController.makeAdministrator);
-router.patch('/remove-admin/:userId', authMiddleware, UserController.removeAdministrator);
+// Super Admin Routes
+router.post('/create-user', UserController.createUser);
+router.post('/create-superadmin', UserController.createSuperAdmin);
+router.get('/users', UserController.getAllUsers);
+
+
+// New Super Admin Features
+router.patch('/update-user/:userId', UserController.updateUser);
+router.delete('/delete-user/:userId', UserController.deleteUser);
+router.patch('/grant-permissions/:userId', UserController.grantPermission);
+router.patch('/revoke-permissions/:userId', UserController.revokePermission);
+
+router.patch('/make-admin/:userId', UserController.makeAdministrator);
+router.patch('/remove-admin/:userId', UserController.removeAdministrator);
 
 // router.get('/finance-data', 
 //     authMiddleware, 
