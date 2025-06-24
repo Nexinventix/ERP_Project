@@ -246,7 +246,7 @@ class FleetController {
       const vehicles = await Vehicle.find()
         .populate('currentDriver')
         .populate('maintenanceSchedule')
-        .populate('insurance');
+        // .populate('insurance');
       this.sendResponse(res, 200, vehicles);
       return;
     } catch (error) {
