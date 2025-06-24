@@ -1,0 +1,18 @@
+2025-06-24 21:16:54 info: Server running on port 8000
+2025-06-24 21:16:54 info: =================================
+2025-06-24 21:16:54 info: ======= ENV: development =======
+2025-06-24 21:16:54 info: 🚀 App listening on the port 8000
+2025-06-24 21:16:54 info: =================================
+2025-06-24 21:16:57 info: Database connected successfully!
+2025-06-24 21:16:57 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-06-24 21:22:06 info: ::1 - - [24/Jun/2025:20:22:06 +0000] "GET /api/vehicles HTTP/1.1" 400 25 "-" "PostmanRuntime/7.44.1"
+2025-06-24 21:23:12 info: ::1 - - [24/Jun/2025:20:23:12 +0000] "GET /api/vehicles HTTP/1.1" 500 134 "-" "PostmanRuntime/7.44.1"
+2025-06-24 21:24:07 info: Server running on port 8000
+2025-06-24 21:24:07 info: =================================
+2025-06-24 21:24:07 info: ======= ENV: development =======
+2025-06-24 21:24:07 info: 🚀 App listening on the port 8000
+2025-06-24 21:24:07 info: =================================
+2025-06-24 21:24:10 info: Database connected successfully!
+2025-06-24 21:24:10 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-06-24 21:24:17 info: ::1 - - [24/Jun/2025:20:24:17 +0000] "GET /api/vehicles HTTP/1.1" 200 8049 "-" "PostmanRuntime/7.44.1"
+2025-06-24 21:24:28 info: Received SIGINT. Shutting down server...
