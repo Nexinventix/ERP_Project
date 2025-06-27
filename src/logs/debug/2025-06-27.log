@@ -1,0 +1,61 @@
+2025-06-27 14:59:01 info: Server running on port 8000
+2025-06-27 14:59:01 info: =================================
+2025-06-27 14:59:01 info: ======= ENV: development =======
+2025-06-27 14:59:01 info: 🚀 App listening on the port 8000
+2025-06-27 14:59:01 info: =================================
+2025-06-27 14:59:10 info: Server running on port 8000
+2025-06-27 14:59:10 info: =================================
+2025-06-27 14:59:10 info: ======= ENV: development =======
+2025-06-27 14:59:10 info: 🚀 App listening on the port 8000
+2025-06-27 14:59:10 info: =================================
+2025-06-27 14:59:12 info: Database connected successfully!
+2025-06-27 14:59:12 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 15:00:57 info: ::1 - - [27/Jun/2025:14:00:57 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.44.1"
+2025-06-27 15:01:59 info: ::1 - - [27/Jun/2025:14:01:59 +0000] "POST /api/create-user HTTP/1.1" 400 127 "-" "PostmanRuntime/7.44.1"
+2025-06-27 15:04:42 info: ::1 - - [27/Jun/2025:14:04:42 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.44.1"
+2025-06-27 15:58:39 info: Server running on port 8000
+2025-06-27 15:58:39 info: =================================
+2025-06-27 15:58:39 info: ======= ENV: development =======
+2025-06-27 15:58:39 info: 🚀 App listening on the port 8000
+2025-06-27 15:58:39 info: =================================
+2025-06-27 15:58:42 info: Database connected successfully!
+2025-06-27 15:58:42 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 16:01:43 info: Server running on port 8000
+2025-06-27 16:01:43 info: =================================
+2025-06-27 16:01:43 info: ======= ENV: development =======
+2025-06-27 16:01:43 info: 🚀 App listening on the port 8000
+2025-06-27 16:01:43 info: =================================
+2025-06-27 16:01:47 info: Database connected successfully!
+2025-06-27 16:01:47 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 16:02:35 info: Server running on port 8000
+2025-06-27 16:02:35 info: =================================
+2025-06-27 16:02:35 info: ======= ENV: development =======
+2025-06-27 16:02:35 info: 🚀 App listening on the port 8000
+2025-06-27 16:02:35 info: =================================
+2025-06-27 16:02:37 info: Database connected successfully!
+2025-06-27 16:02:37 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-06-27 16:03:49 info: ::1 - - [27/Jun/2025:15:03:49 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.44.1"
+2025-06-27 16:09:20 info: Server running on port 8000
+2025-06-27 16:09:20 info: =================================
+2025-06-27 16:09:20 info: ======= ENV: development =======
+2025-06-27 16:09:20 info: 🚀 App listening on the port 8000
+2025-06-27 16:09:20 info: =================================
+2025-06-27 16:09:27 info: Database connected successfully!
+2025-06-27 16:09:27 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 16:10:55 info: ::1 - - [27/Jun/2025:15:10:55 +0000] "POST /api/create-user HTTP/1.1" 201 64 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:12:32 info: Server running on port 8000
+2025-06-27 22:12:32 info: =================================
+2025-06-27 22:12:32 info: ======= ENV: development =======
+2025-06-27 22:12:32 info: 🚀 App listening on the port 8000
+2025-06-27 22:12:32 info: =================================
+2025-06-27 22:12:35 info: Database connected successfully!
+2025-06-27 22:12:35 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-06-27 22:19:03 info: Server running on port 8000
+2025-06-27 22:19:03 info: =================================
+2025-06-27 22:19:03 info: ======= ENV: development =======
+2025-06-27 22:19:03 info: 🚀 App listening on the port 8000
+2025-06-27 22:19:03 info: =================================
+2025-06-27 22:19:05 info: Database connected successfully!
+2025-06-27 22:19:05 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 22:21:07 info: ::1 - - [27/Jun/2025:21:21:07 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:22:07 info: ::1 - - [27/Jun/2025:21:22:07 +0000] "PATCH /api/vehicles/67ffa97f7d5bc64899ec66d4/assign HTTP/1.1" 403 47 "-" "PostmanRuntime/7.44.1"

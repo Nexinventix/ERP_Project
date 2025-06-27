@@ -122,10 +122,10 @@ class FleetController {
       const { departments, currentDriver } = req.body;
       const { vehicleId } = req.params;
 
-      if (!req.user.isAdministrator) {
-        this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
-        return;
-      }
+      // if (!req.user.isAdministrator) {
+      //   this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
+      //   return;
+      // }
 
       const vehicle = await Vehicle.findById(vehicleId);
       if (!vehicle) {
@@ -154,10 +154,10 @@ class FleetController {
       const { projects } = req.body;
       const { vehicleId } = req.params;
 
-      if (!req.user.isAdministrator) {
-        this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
-        return;
-      }
+      // if (!req.user.isAdministrator) {
+      //   this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
+      //   return;
+      // }
 
       const vehicle = await Vehicle.findById(vehicleId);
       if (!vehicle) {
@@ -185,10 +185,10 @@ class FleetController {
       const { clients } = req.body;
       const { vehicleId } = req.params;
 
-      if (!req.user.isAdministrator) {
-        this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
-        return;
-      }
+      // if (!req.user.isAdministrator) {
+      //   this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
+      //   return;
+      // }
 
       const vehicle = await Vehicle.findById(vehicleId);
       if (!vehicle) {
@@ -216,10 +216,10 @@ class FleetController {
       const { locations } = req.body;
       const { vehicleId } = req.params;
 
-      if (!req.user.isAdministrator) {
-        this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
-        return;
-      }
+      // if (!req.user.isAdministrator) {
+      //   this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
+      //   return;
+      // }
 
       const vehicle = await Vehicle.findById(vehicleId);
       if (!vehicle) {
