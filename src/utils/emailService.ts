@@ -8,7 +8,8 @@ export const sendEmail = async (
   to: string,
   subject: string,
   text: string,
-  html?: string
+  html?: string,
+  attachments?: any[]
 ) => {
   try {
     console.log(EMAIL_USER, EMAIL_PASS);
@@ -29,7 +30,17 @@ export const sendEmail = async (
     if (html) {
       mailOptions.html = html;
     }
-
+    // Always include the logo image as a CID attachment
+    const logoAttachment = {
+      filename: 'logo.png',
+      path: 'https://res.cloudinary.com/onevoteapps/image/upload/v1751032671/DREAMWORK_4_a1ckjq.png',
+      cid: 'unique-logo-cid'
+    };
+    if (attachments && attachments.length > 0) {
+      mailOptions.attachments = [logoAttachment, ...attachments];
+    } else {
+      mailOptions.attachments = [logoAttachment];
+    }
     await transporter.sendMail(mailOptions);
     console.log(`📧 Email sent to ${to}`);
   } catch (error) {
@@ -45,8 +56,8 @@ export function generateAccountCreatedEmailHTML(firstName: string, email: string
   <div style="background:#f5f7fa;padding:40px 0;font-family:'Segoe UI',Arial,sans-serif;">
     <div style="max-width:480px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:32px;">
       <div style="text-align:center;margin-bottom:24px;">
-        <img src="https://nexinventix.com/logo.png" alt="Nexinventix ERP" style="width:80px;margin-bottom:8px;">
-        <h2 style="color:#2d3748;margin:0;">Welcome to Nexinventix ERP!</h2>
+        <img src="cid:unique-logo-cid" alt="DreamWork ERP" style="width:80px;margin-bottom:8px;">
+        <h2 style="color:#2d3748;margin:0;">Welcome to DreamWork ERP!</h2>
       </div>
       <p style="font-size:16px;color:#4a5568;margin-bottom:18px;">
         Hi <b>${firstName}</b>,
@@ -66,7 +77,7 @@ export function generateAccountCreatedEmailHTML(firstName: string, email: string
           </td>
         </tr>
       </table>
-      <a href="https://erp.nexinventix.com/login" style="display:inline-block;padding:12px 24px;background:#3b82f6;color:#fff;border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:0.5px;margin-bottom:18px;">
+      <a href="https://dreamworkerp.nexinventix.com/login" style="display:inline-block;padding:12px 24px;background:#3b82f6;color:#fff;border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:0.5px;margin-bottom:18px;">
         Log In to Your Account
       </a>
       <p style="font-size:14px;color:#718096;margin-top:24px;">
@@ -76,11 +87,11 @@ export function generateAccountCreatedEmailHTML(firstName: string, email: string
         If you have any questions or need help, just reply to this email.<br>
         <br>
         Best regards,<br>
-        <b>The Nexinventix ERP Team</b>
+        <b>The DreamWork ERP Team</b>
       </p>
     </div>
     <div style="text-align:center;font-size:12px;color:#a0aec0;margin-top:24px;">
-      © ${new Date().getFullYear()} Nexinventix ERP. All rights reserved.
+      © ${new Date().getFullYear()} DreamWork ERP. All rights reserved.
     </div>
   </div>
   `;
