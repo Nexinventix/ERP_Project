@@ -18,6 +18,7 @@ router.patch('/update-password', UserController.updatePassword);
 router.post('/create-user', UserController.createUser);
 router.post('/create-superadmin', UserController.createSuperAdmin);
 router.get('/users', UserController.getAllUsers);
+router.get('/user/:userId', UserController.getOneUser)
 
 
 // New Super Admin Features
