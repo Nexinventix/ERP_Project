@@ -59,3 +59,14 @@
 2025-06-27 22:19:05 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
 2025-06-27 22:21:07 info: ::1 - - [27/Jun/2025:21:21:07 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.44.1"
 2025-06-27 22:22:07 info: ::1 - - [27/Jun/2025:21:22:07 +0000] "PATCH /api/vehicles/67ffa97f7d5bc64899ec66d4/assign HTTP/1.1" 403 47 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:25:56 info: Server running on port 8000
+2025-06-27 22:25:56 info: =================================
+2025-06-27 22:25:56 info: ======= ENV: development =======
+2025-06-27 22:25:56 info: 🚀 App listening on the port 8000
+2025-06-27 22:25:56 info: =================================
+2025-06-27 22:25:59 info: Database connected successfully!
+2025-06-27 22:25:59 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-06-27 22:26:02 info: ::1 - - [27/Jun/2025:21:26:02 +0000] "PATCH /api/vehicles/67ffa97f7d5bc64899ec66d4/assign HTTP/1.1" 200 1101 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:26:50 info: ::1 - - [27/Jun/2025:21:26:50 +0000] "POST /api/login HTTP/1.1" 401 33 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:27:32 info: ::1 - - [27/Jun/2025:21:27:32 +0000] "POST /api/login HTTP/1.1" 200 519 "-" "PostmanRuntime/7.44.1"
+2025-06-27 22:28:21 info: ::1 - - [27/Jun/2025:21:28:21 +0000] "PATCH /api/vehicles/67ffa97f7d5bc64899ec66d4/assign HTTP/1.1" 403 117 "-" "PostmanRuntime/7.44.1"
