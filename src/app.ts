@@ -35,6 +35,7 @@ import driverRouter from './routes/driver'
 import tripRouter from './routes/trip'
 // console.log('DEBUG: Importing fuelLogRouter');
 import fuelLogRouter from './routes/fuelLog'
+import infographics from './routes/infographics'
 // import certificationRouter from './routes/certification'
 
 const App = {
@@ -181,6 +182,7 @@ const App = {
       this.app.use('/api', driverRouter);
       this.app.use('/api', tripRouter);
       this.app.use('/api', fuelLogRouter);
+      this.app.use('/api', infographics)
    }
 }
 
