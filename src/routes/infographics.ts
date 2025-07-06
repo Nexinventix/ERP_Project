@@ -1,5 +1,5 @@
 import express from "express";
-import InfoGraphicsController from "@/controllers/fleetController/infographics";
+import InfoGraphicsController from "../controllers/fleetController/infographics";
 
 const router = express.Router();
 
