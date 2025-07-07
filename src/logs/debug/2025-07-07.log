@@ -1,0 +1,19 @@
+2025-07-07 00:05:03 info: ::1 - - [06/Jul/2025:23:05:03 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.44.1"
+2025-07-07 00:06:01 info: ::1 - - [06/Jul/2025:23:06:01 +0000] "GET /api/vehicles HTTP/1.1" 200 9113 "-" "PostmanRuntime/7.44.1"
+2025-07-07 00:11:26 info: Received SIGINT. Shutting down server...
+2025-07-07 07:40:48 info: Server running on port 8000
+2025-07-07 07:40:48 info: =================================
+2025-07-07 07:40:48 info: ======= ENV: development =======
+2025-07-07 07:40:48 info: 🚀 App listening on the port 8000
+2025-07-07 07:40:48 info: =================================
+2025-07-07 07:40:51 info: Database connected successfully!
+2025-07-07 07:40:51 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-07-07 07:41:27 info: ::1 - - [07/Jul/2025:06:41:27 +0000] "GET /api/vehicles HTTP/1.1" 200 9113 "-" "PostmanRuntime/7.44.1"
+2025-07-07 08:47:48 info: Server running on port 8000
+2025-07-07 08:47:48 info: =================================
+2025-07-07 08:47:48 info: ======= ENV: development =======
+2025-07-07 08:47:48 info: 🚀 App listening on the port 8000
+2025-07-07 08:47:48 info: =================================
+2025-07-07 08:47:50 info: Database connected successfully!
+2025-07-07 08:47:50 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-07-07 08:48:03 info: Received SIGINT. Shutting down server...
