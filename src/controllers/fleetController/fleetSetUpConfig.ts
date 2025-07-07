@@ -1,8 +1,9 @@
 import { Request, Response, RequestHandler, NextFunction } from 'express';
-import { Vehicle, VehicleType, Department, ICertification } from '../../models/fleet';
+import { Vehicle, VehicleType, Driver, ICertification } from '../../models/fleet';
 import { User } from '../../models/users';
 import { uploadToCloudinary } from '../../utils/cloudinary';
 import multer from 'multer';
+import { ObjectId } from 'mongodb';
 
 interface MulterRequest extends Request {
     files?: { [fieldname: string]: Express.Multer.File[] } | Express.Multer.File[];
@@ -122,6 +123,8 @@ class FleetController {
       const { departments, currentDriver } = req.body;
       const { vehicleId } = req.params;
 
+      const driver = await Driver.findById(currentDriver);
+
       // if (!req.user.isAdministrator) {
       //   this.sendResponse(res, 403, { message: 'Not authorized to assign vehicles' });
       //   return;
@@ -136,6 +139,14 @@ class FleetController {
       if (departments) {
         vehicle.departments = Array.isArray(departments) ? departments : [departments];
       }
+      if (!driver) {
+        this.sendResponse(res, 404, { message: 'Driver not found' });
+        return;
+      }
+
+      driver.assignedVehicle = new ObjectId(vehicleId);
+      await driver.save();
+
       if (currentDriver) vehicle.currentDriver = currentDriver;
 
       await vehicle.save();
