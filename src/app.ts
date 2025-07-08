@@ -139,13 +139,19 @@ const App = {
       maxAge: 600
       }));
 
-      // this.app.use(cors({
-      //    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000','https://dreamwork-test.vercel.app/'],
-      //    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-      //    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
-      //    credentials: true,
-      //    maxAge: 600 // 10 minutes
-      // }))
+      this.app.options("*", cors({
+      origin: (origin, callback) => {
+         if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+         } else {
+            callback(new Error(`CORS policy does not allow access from origin: ${origin}`));
+         }
+      },
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+      allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
+      credentials: true
+      }));
+
 
       // Body parsing
       this.app.use(express.json({ limit: '10kb' })) // Limit body size
