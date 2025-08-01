@@ -254,11 +254,30 @@ class FleetController {
 
   getAllVehicles: AsyncRequestHandler = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
     try {
+      // Pagination parameters
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 10;
+      const skip = (page - 1) * limit;
+
+      // Get total count for pagination
+      const total = await Vehicle.countDocuments();
+      const totalPages = Math.ceil(total / limit);
+
       const vehicles = await Vehicle.find()
+        .skip(skip)
+        .limit(limit)
         .populate('currentDriver')
-        .populate('maintenanceSchedule')
-        // .populate('insurance');
-      this.sendResponse(res, 200, vehicles);
+        .populate('maintenanceSchedule');
+
+      this.sendResponse(res, 200, {
+        data: vehicles,
+        pagination: {
+          total,
+          page,
+          totalPages,
+          limit
+        }
+      });
       return;
     } catch (error) {
       this.sendResponse(res, 500, { message: error instanceof Error ? error.message : 'Server error' });

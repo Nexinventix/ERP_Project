@@ -76,6 +76,8 @@ export interface ITrip {
     _id: Types.ObjectId;
     vehicle: Types.ObjectId;
     driver: Types.ObjectId;
+    client: Types.ObjectId;
+    shipmentId: string;
     startLocation: string;
     endLocation: string;
     startTime: Date;
@@ -85,9 +87,14 @@ export interface ITrip {
         type: string;
         weight: number;
         description: string;
+        numberOfPackages: number;
+        fuelLiters: number;
+        fuelCost: number;
+        maintanceCost: number;
+        tollFees: number;
+        expectedRevenue: number;
+        handlingInstructions: string;
     };
-    passengers?: number;
-    revenue: number;
     status: 'scheduled' | 'in-progress' | 'completed' | 'cancelled';
 }
 
@@ -456,9 +463,12 @@ const DriverSchema = new Schema<IDriver>({
 const TripSchema = new Schema<ITrip>({
     vehicle: { type: Schema.Types.ObjectId, ref: 'Vehicle', required: true },
     driver: { type: Schema.Types.ObjectId, ref: 'Driver', required: true },
+    client: { type: Schema.Types.ObjectId, ref: 'Client', required: true },
     startLocation: { type: String, required: true },
+    shipmentId: { type: String, required: true },
     endLocation: { type: String, required: true },
     startTime: { type: Date, required: true },
+
     endTime: Date,
     distance: { 
         type: Number, 
@@ -486,22 +496,47 @@ const TripSchema = new Schema<ITrip>({
             type: String,
             trim: true,
             maxlength: [200, 'Description cannot exceed 200 characters']
-        }
-    },
-    passengers: { 
-        type: Number,
-        min: [0, 'Number of passengers cannot be negative'],
-        max: [500, 'Number of passengers cannot exceed 500']
-    },
-    revenue: { 
-        type: Number, 
-        required: [true, 'Revenue is required'],
-        min: [0, 'Revenue cannot be negative'],
-        validate: {
-            validator: function(v: number) {
-                return Number.isFinite(v);
-            },
-            message: 'Revenue must be a valid number'
+        },
+        numberOfPackages: { 
+            type: Number,
+            min: [0, 'Number of packages cannot be negative'],
+            max: [100000, 'Number of packages cannot exceed 100,000']
+        },
+        fuelLiters: { 
+            type: Number,
+            min: [0, 'Fuel liters cannot be negative'],
+            max: [100000, 'Fuel liters cannot exceed 100,000']
+        },
+        fuelCost: { 
+            type: Number,
+            min: [0, 'Fuel cost cannot be negative'],
+            max: [100000, 'Fuel cost cannot exceed 100,000']
+        },
+        maintanceCost: { 
+            type: Number,
+            min: [0, 'Maintance cost cannot be negative'],
+            max: [100000, 'Maintance cost cannot exceed 100,000']
+        },
+        tollFees: { 
+            type: Number,
+            min: [0, 'Toll fees cannot be negative'],
+            max: [100000, 'Toll fees cannot exceed 100,000']
+        },
+        expectedRevenue: { 
+            type: Number, 
+            required: [true, 'Revenue is required'],
+            min: [0, 'Revenue cannot be negative'],
+            validate: {
+                validator: function(v: number) {
+                    return Number.isFinite(v);
+                },
+                message: 'Revenue must be a valid number'
+            }
+        },
+        handlingInstructions: { 
+            type: String,
+            trim: true,
+            maxlength: [500, 'Handling instructions cannot exceed 500 characters']
         }
     },
     status: { 
