@@ -1,0 +1,9 @@
+2025-08-01 16:36:14 info: Server running on port 8000
+2025-08-01 16:36:14 info: =================================
+2025-08-01 16:36:14 info: ======= ENV: development =======
+2025-08-01 16:36:14 info: 🚀 App listening on the port 8000
+2025-08-01 16:36:14 info: =================================
+2025-08-01 16:36:20 info: Database connected successfully!
+2025-08-01 16:36:20 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-08-01 16:39:28 info: ::1 - - [01/Aug/2025:15:39:28 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.44.1"
+2025-08-01 16:45:21 info: ::1 - - [01/Aug/2025:15:45:21 +0000] "POST /api/clients HTTP/1.1" 201 450 "-" "PostmanRuntime/7.44.1"

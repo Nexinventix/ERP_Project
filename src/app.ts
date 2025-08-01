@@ -36,6 +36,7 @@ import tripRouter from './routes/trip'
 // console.log('DEBUG: Importing fuelLogRouter');
 import fuelLogRouter from './routes/fuelLog'
 import infographics from './routes/infographics'
+import clientRouter from './routes/client'
 // import certificationRouter from './routes/certification'
 
 const App = {
@@ -189,6 +190,7 @@ const App = {
       this.app.use('/api', tripRouter);
       this.app.use('/api', fuelLogRouter);
       this.app.use('/api', infographics)
+      this.app.use('/api/clients', clientRouter);
    }
 }
 

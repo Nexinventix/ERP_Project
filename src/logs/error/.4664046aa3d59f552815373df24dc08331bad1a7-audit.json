@@ -49,6 +49,16 @@
             "date": 1751870440944,
             "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-07-07.log",
             "hash": "e6ca58e18649a751d2e35a90f8f742ddc77664bb45bb00ff2d1696a34feb99db"
+        },
+        {
+            "date": 1753771304216,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-07-29.log",
+            "hash": "d59ea96b39273dc4498b72bd99c75895e3afca4d82167b171088659e6b9e008a"
+        },
+        {
+            "date": 1754062572096,
+            "name": "C:\\Users\\User\\OneDrive\\Desktop\\Projects\\ERP_Project\\src\\logs\\error\\2025-08-01.log",
+            "hash": "3db04a73ba6234cb1372331bcbda46149c94ce016169d91b2d850b3ce014ed6b"
         }
     ],
     "hashType": "sha256"

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { Trip, Driver, Vehicle } from '../../models/fleet';
+import  {Client} from '../../models/client'
 import { User } from '../../models/users';
 
 interface AuthenticatedRequest extends Request {
@@ -13,13 +14,18 @@ class TripController {
       const {
         vehicleId,
         driverId,
+        clientId,
         startLocation,
         endLocation,
         startTime,
         distance,
-        cargo,
-        passengers,
-        revenue
+        numberOfPackages,
+        fuelLiters,
+        fuelCost,
+        maintanceCost,
+        tollFees,
+        expectedRevenue,
+        handlingInstructions
       } = req.body;
 
       // Verify vehicle and driver availability
@@ -39,16 +45,28 @@ class TripController {
         return res.status(400).json({ message: 'Driver is not available' });
       }
 
+      const client = await Client.findById(clientId);
+      if (!client) {
+        return res.status(404).json({ message: 'Client not found' });
+      }
+
       const trip = new Trip({
         vehicle: vehicleId,
         driver: driverId,
+        client: clientId,
         startLocation,
         endLocation,
         startTime,
         distance,
-        cargo,
-        passengers,
-        revenue,
+        cargo: {
+          numberOfPackages,
+          fuelLiters,
+          fuelCost,
+          maintanceCost,
+          tollFees,
+          expectedRevenue,
+          handlingInstructions
+        },
         status: 'scheduled'
       });
 
@@ -157,7 +175,7 @@ class TripController {
         totalTrips: trips.length,
         completedTrips: trips.filter(t => t.status === 'completed').length,
         cancelledTrips: trips.filter(t => t.status === 'cancelled').length,
-        totalRevenue: trips.reduce((sum, trip) => sum + trip.revenue, 0),
+        totalRevenue: trips.reduce((sum, trip) => sum + (trip.cargo?.expectedRevenue || 0), 0),
         totalDistance: trips.reduce((sum, trip) => sum + trip.distance, 0),
       };
 

@@ -162,9 +162,29 @@ class DriverController {
   // Get all drivers
   async getAllDrivers(req: AuthenticatedRequest, res: Response) {
     try {
+      // Pagination parameters
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 10;
+      const skip = (page - 1) * limit;
+
+      // Get total count for pagination
+      const total = await Driver.countDocuments();
+      const totalPages = Math.ceil(total / limit);
+
       const drivers = await Driver.find()
+        .skip(skip)
+        .limit(limit)
         .populate('assignedVehicle');
-      res.json(drivers);
+
+      res.json({
+        data: drivers,
+        pagination: {
+          total,
+          page,
+          totalPages,
+          limit
+        }
+      });
     } catch (error) {
       res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
     }
