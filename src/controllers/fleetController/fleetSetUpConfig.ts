@@ -35,6 +35,8 @@ class FleetController {
         locations,
       } = req.body;
 
+      const trimType = type.toLowerCase();
+
       // Validate vehicle type
       if (!Object.values(VehicleType).includes(type)) {
         this.sendResponse(res, 400, { message: 'Invalid vehicle type' });
