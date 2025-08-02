@@ -1,10 +1,10 @@
 import { Schema, model, Document, Model, Types } from 'mongoose';
 
 export enum VehicleType {
-    BIKE = 'Bike',
-    CAR = 'Car',
-    BUS = 'Bus',
-    TRUCK = 'Truck',
+    BIKE = 'bike',
+    CAR = 'car',
+    BUS = 'bus',
+    TRUCK = 'truck',
 }
 
 export enum Department {
