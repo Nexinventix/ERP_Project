@@ -28,7 +28,7 @@ export const validateVehicleInput: RequestHandler[] = [
     body('model').trim().notEmpty().escape(),
     body('registration').trim().notEmpty().matches(/^[A-Za-z0-9-]+$/),
     body('plateNumber').trim().notEmpty().matches(/^[A-Za-z0-9-]+$/),
-    body('type').isIn(['Bike', 'Car', 'Truck', 'Van']),
+    body('type').isIn(['Bike', 'Car', 'Truck', 'Van', 'Bus', 'Bicycle']),
     async (req: Request, res: Response, next: NextFunction): Promise<void> => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
