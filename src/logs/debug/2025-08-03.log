@@ -111,3 +111,33 @@
 2025-08-03 16:43:35 info: Database connected successfully!
 2025-08-03 16:43:35 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
 2025-08-03 16:43:40 info: Received SIGINT. Shutting down server...
+2025-08-03 19:24:28 info: Server running on port 8000
+2025-08-03 19:24:28 info: =================================
+2025-08-03 19:24:28 info: ======= ENV: development =======
+2025-08-03 19:24:28 info: 🚀 App listening on the port 8000
+2025-08-03 19:24:28 info: =================================
+2025-08-03 19:24:31 info: Database connected successfully!
+2025-08-03 19:24:31 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-08-03 19:24:42 info: ::1 - - [03/Aug/2025:18:24:42 +0000] "GET /api/vehicles/search??page=1&limit=10&query=SUV HTTP/1.1" 200 6052 "-" "PostmanRuntime/7.45.0"
+2025-08-03 19:24:55 info: ::1 - - [03/Aug/2025:18:24:55 +0000] "GET /api/vehicles/search?page=1&limit=10&query=SUV HTTP/1.1" 200 6052 "-" "PostmanRuntime/7.45.0"
+2025-08-03 19:35:32 info: Server running on port 8000
+2025-08-03 19:35:32 info: =================================
+2025-08-03 19:35:32 info: ======= ENV: development =======
+2025-08-03 19:35:32 info: 🚀 App listening on the port 8000
+2025-08-03 19:35:32 info: =================================
+2025-08-03 19:35:35 info: Database connected successfully!
+2025-08-03 19:35:35 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-08-03 19:36:12 info: Server running on port 8000
+2025-08-03 19:36:12 info: =================================
+2025-08-03 19:36:12 info: ======= ENV: development =======
+2025-08-03 19:36:12 info: 🚀 App listening on the port 8000
+2025-08-03 19:36:12 info: =================================
+2025-08-03 19:36:14 info: Database connected successfully!
+2025-08-03 19:36:14 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-08-03 19:39:23 info: Server running on port 8000
+2025-08-03 19:39:23 info: =================================
+2025-08-03 19:39:23 info: ======= ENV: development =======
+2025-08-03 19:39:23 info: 🚀 App listening on the port 8000
+2025-08-03 19:39:23 info: =================================
+2025-08-03 19:39:27 info: Database connected successfully!
+2025-08-03 19:39:27 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net

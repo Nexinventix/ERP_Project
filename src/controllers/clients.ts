@@ -81,14 +81,15 @@ export async function deleteClient(req: AuthenticatedRequest, res: Response) {
 }
 
 // Search clients by company name, contact person, or email
-export async function searchClients(req: AuthenticatedRequest, res: Response) {
+export async function searchClients(req: AuthenticatedRequest, res: Response): Promise<void> {
   try {
     const { query, page = 1, limit = 10 } = req.query;
     
     // Validate query parameter
     if (!query || typeof query !== 'string' || query.trim().length === 0) {
-      return res.status(400).json({ message: 'Search query is required and must be a non-empty string' });
-    }
+      res.status(400).json({ message: 'Search query is required and must be a non-empty string' });
+      return;
+    }   
 
     // Pagination parameters
     const pageNum = parseInt(page as string) || 1;
@@ -141,7 +142,7 @@ export async function searchClients(req: AuthenticatedRequest, res: Response) {
       });
     }
 
-    res.json({
+    res.status(200).json({
       data: clients,
       pagination: {
         total,
@@ -150,8 +151,10 @@ export async function searchClients(req: AuthenticatedRequest, res: Response) {
         limit: limitNum
       }
     });
+    return;
   } catch (error) {
     res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    return;
   }
 }
 
@@ -168,7 +171,7 @@ export async function debugClients(req: AuthenticatedRequest, res: Response) {
       });
     }
 
-    res.json({
+    res.status(200).json({
       message: 'Debug info logged to console',
       totalClients: allClients.length,
       sampleClients: allClients.map(c => ({
@@ -179,7 +182,9 @@ export async function debugClients(req: AuthenticatedRequest, res: Response) {
         industry: c.industry
       }))
     });
+    return;
   } catch (error) {
     res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    return;
   }
 }
