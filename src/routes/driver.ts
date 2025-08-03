@@ -15,4 +15,10 @@ router.patch('/drivers/:driverId/performance', authMiddleware, DriverController.
 router.get('/drivers', authMiddleware, DriverController.getAllDrivers as AuthenticatedRequestHandler);
 router.get('/drivers/:driverId', authMiddleware, DriverController.getDriverDetails as AuthenticatedRequestHandler);
 
+// Search drivers by name or license number
+router.get('/drivers/search', authMiddleware, DriverController.searchDrivers as AuthenticatedRequestHandler);
+
+// Debug endpoint to check drivers in database
+router.get('/drivers/debug', authMiddleware, DriverController.debugDrivers as AuthenticatedRequestHandler);
+
 export default router;

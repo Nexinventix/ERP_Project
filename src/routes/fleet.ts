@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { authMiddleware } from '../middlewares/authMiddleware';
 import FleetController from '../controllers/fleetController/fleetSetUpConfig';
-import { validateVehicleInput, validateAssignVehicle, validateVehicleStatus } from '../middlewares/securityMiddleware';
+import { validateVehicleInput, validateAssignVehicle, validateVehicleStatus, validateVehicleSearch } from '../middlewares/securityMiddleware';
 import { upload } from '../utils/multer';
 import { permissionMiddleware } from '../middlewares/permission.middleware';
 import { Permission } from '../models/users';
@@ -121,6 +121,23 @@ router.patch(
   permissionMiddleware([Permission.ASSIGN_VEHICLE]),
   validateAssignVehicle,
   FleetController.assignVehicleToLocations
+);
+
+// Search vehicles by name or registration number
+router.get(
+  '/vehicles/search',
+  authMiddleware,
+  permissionMiddleware([Permission.VIEW_FLEET_MODULE]),
+  validateVehicleSearch,
+  FleetController.searchVehicles
+);
+
+// Debug endpoint to check vehicles in database
+router.get(
+  '/vehicles/debug',
+  authMiddleware,
+  permissionMiddleware([Permission.VIEW_FLEET_MODULE]),
+  FleetController.debugVehicles
 );
 
 export default router;

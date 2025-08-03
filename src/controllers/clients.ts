@@ -79,3 +79,107 @@ export async function deleteClient(req: AuthenticatedRequest, res: Response) {
     res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
   }
 }
+
+// Search clients by company name, contact person, or email
+export async function searchClients(req: AuthenticatedRequest, res: Response) {
+  try {
+    const { query, page = 1, limit = 10 } = req.query;
+    
+    // Validate query parameter
+    if (!query || typeof query !== 'string' || query.trim().length === 0) {
+      return res.status(400).json({ message: 'Search query is required and must be a non-empty string' });
+    }
+
+    // Pagination parameters
+    const pageNum = parseInt(page as string) || 1;
+    const limitNum = parseInt(limit as string) || 10;
+    const skip = (pageNum - 1) * limitNum;
+
+    // Create search query using regex for case-insensitive search
+    // Remove quotes if they exist around the query
+    const searchQuery = query.trim().replace(/^["']|["']$/g, '');
+    const searchRegex = new RegExp(searchQuery, 'i');
+
+    // Build the search filter
+    const searchFilter = {
+      $or: [
+        { companyName: searchRegex },
+        { contactPerson: searchRegex },
+        { email: searchRegex },
+        { contactPersonEmail: searchRegex }
+      ]
+    };
+
+    // Debug: Log the search query and filter
+    console.log('🔍 Client Search Debug:', {
+      originalQuery: query,
+      cleanedQuery: searchQuery,
+      searchFilter,
+      searchRegex: searchRegex.toString()
+    });
+
+    // Get total count for pagination
+    const total = await Client.countDocuments(searchFilter);
+    const totalPages = Math.ceil(total / limitNum);
+
+    // Debug: Log the count
+    console.log('📊 Client Search Results:', { total, totalPages });
+
+    // Perform the search with pagination
+    const clients = await Client.find(searchFilter)
+      .skip(skip)
+      .limit(limitNum)
+      .sort({ createdAt: -1 }); // Sort by newest first
+
+    // Debug: Log the found clients
+    console.log('🏢 Found Clients:', clients.length);
+    if (clients.length > 0) {
+      console.log('Sample client:', {
+        companyName: clients[0].companyName,
+        contactPerson: clients[0].contactPerson,
+        email: clients[0].email
+      });
+    }
+
+    res.json({
+      data: clients,
+      pagination: {
+        total,
+        page: pageNum,
+        totalPages,
+        limit: limitNum
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+  }
+}
+
+// Debug method to check all clients in database
+export async function debugClients(req: AuthenticatedRequest, res: Response) {
+  try {
+    const allClients = await Client.find().limit(5);
+    console.log('🔍 Debug: All clients in database:', allClients.length);
+    
+    if (allClients.length > 0) {
+      console.log('Sample clients:');
+      allClients.forEach((client, index) => {
+        console.log(`${index + 1}. Company: "${client.companyName}", Contact: "${client.contactPerson}", Email: "${client.email}"`);
+      });
+    }
+
+    res.json({
+      message: 'Debug info logged to console',
+      totalClients: allClients.length,
+      sampleClients: allClients.map(c => ({
+        companyName: c.companyName,
+        contactPerson: c.contactPerson,
+        email: c.email,
+        phone: c.phone,
+        industry: c.industry
+      }))
+    });
+  } catch (error) {
+    res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+  }
+}

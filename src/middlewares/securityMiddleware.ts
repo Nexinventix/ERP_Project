@@ -83,6 +83,24 @@ export const validateVehicleStatus: RequestHandler[] = [
     }
 ];
 
+// Validation middleware for vehicle search
+export const validateVehicleSearch: RequestHandler[] = [
+    body('query')
+        .optional()
+        .trim()
+        .isLength({ min: 1, max: 100 })
+        .withMessage('Search query must be between 1 and 100 characters')
+        .escape(),
+    async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            res.status(400).json({ errors: errors.array() });
+            return;
+        }
+        next();
+    }
+];
+
 // Error handling middleware
 export const errorHandler = (err: Error, req: Request, res: Response, next: NextFunction) => {
     console.error(err.stack);
