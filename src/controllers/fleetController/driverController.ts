@@ -206,6 +206,107 @@ class DriverController {
       res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
     }
   }
+
+  // Search drivers by name or license number
+  async searchDrivers(req: AuthenticatedRequest, res: Response) {
+    try {
+      const { query, page = 1, limit = 10 } = req.query;
+      
+      // Validate query parameter
+      if (!query || typeof query !== 'string' || query.trim().length === 0) {
+        return res.status(400).json({ message: 'Search query is required and must be a non-empty string' });
+      }
+
+      // Pagination parameters
+      const pageNum = parseInt(page as string) || 1;
+      const limitNum = parseInt(limit as string) || 10;
+      const skip = (pageNum - 1) * limitNum;
+
+      // Create search query using regex for case-insensitive search
+      // Remove quotes if they exist around the query
+      const searchQuery = query.trim().replace(/^["']|["']$/g, '');
+      const searchRegex = new RegExp(searchQuery, 'i');
+
+      // Build the search filter
+      const searchFilter = {
+        $or: [
+          { 'personalInfo.name': searchRegex },
+          { 'personalInfo.licenseNumber': searchRegex }
+        ]
+      };
+
+      // Debug: Log the search query and filter
+      console.log('🔍 Driver Search Debug:', {
+        originalQuery: query,
+        cleanedQuery: searchQuery,
+        searchFilter,
+        searchRegex: searchRegex.toString()
+      });
+
+      // Get total count for pagination
+      const total = await Driver.countDocuments(searchFilter);
+      const totalPages = Math.ceil(total / limitNum);
+
+      // Debug: Log the count
+      console.log('📊 Driver Search Results:', { total, totalPages });
+
+      // Perform the search with pagination
+      const drivers = await Driver.find(searchFilter)
+        .skip(skip)
+        .limit(limitNum)
+        .populate('assignedVehicle')
+        .sort({ createdAt: -1 }); // Sort by newest first
+
+      // Debug: Log the found drivers
+      console.log('👨‍💼 Found Drivers:', drivers.length);
+      if (drivers.length > 0) {
+        console.log('Sample driver:', {
+          name: drivers[0].personalInfo.name,
+          licenseNumber: drivers[0].personalInfo.licenseNumber
+        });
+      }
+
+      res.json({
+        data: drivers,
+        pagination: {
+          total,
+          page: pageNum,
+          totalPages,
+          limit: limitNum
+        }
+      });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  // Debug method to check all drivers in database
+  async debugDrivers(req: AuthenticatedRequest, res: Response) {
+    try {
+      const allDrivers = await Driver.find().limit(5);
+      console.log('🔍 Debug: All drivers in database:', allDrivers.length);
+      
+      if (allDrivers.length > 0) {
+        console.log('Sample drivers:');
+        allDrivers.forEach((driver, index) => {
+          console.log(`${index + 1}. Name: "${driver.personalInfo.name}", License: "${driver.personalInfo.licenseNumber}"`);
+        });
+      }
+
+      res.json({
+        message: 'Debug info logged to console',
+        totalDrivers: allDrivers.length,
+        sampleDrivers: allDrivers.map(d => ({
+          name: d.personalInfo.name,
+          licenseNumber: d.personalInfo.licenseNumber,
+          contact: d.personalInfo.contact,
+          status: d.status
+        }))
+      });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
 }
 
 export default new DriverController();

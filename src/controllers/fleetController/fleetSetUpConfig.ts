@@ -35,7 +35,7 @@ class FleetController {
         locations,
       } = req.body;
 
-      const trimType = type.toLowerCase();
+      // const trimType = type.toLowerCase();
 
       // Validate vehicle type
       if (!Object.values(VehicleType).includes(type)) {
@@ -308,6 +308,95 @@ class FleetController {
       }
 
       this.sendResponse(res, 200, { message: 'Vehicle status updated', vehicle });
+      return;
+    } catch (error) {
+      this.sendResponse(res, 500, { message: error instanceof Error ? error.message : 'Server error' });
+      return;
+    }
+  }
+
+  // Search vehicles by name (make/model) or registration number
+  searchVehicles: AsyncRequestHandler = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const { query, page = 1, limit = 10 } = req.query;
+      
+      // Validate query parameter
+      if (!query || typeof query !== 'string' || query.trim().length === 0) {
+        this.sendResponse(res, 400, { message: 'Search query is required and must be a non-empty string' });
+        return;
+      }
+
+      // Pagination parameters
+      const pageNum = parseInt(page as string) || 1;
+      const limitNum = parseInt(limit as string) || 10;
+      const skip = (pageNum - 1) * limitNum;
+
+      // Create search query using regex for case-insensitive search
+      const searchQuery = query.trim();
+      const searchRegex = new RegExp(searchQuery, 'i');
+
+      // Build the search filter - simplified and more reliable
+      const searchFilter = {
+        $or: [
+          { make: searchRegex },
+          { model: searchRegex },
+          { registration: searchRegex },
+          { plateNumber: searchRegex }
+        ]
+      };
+
+      // Get total count for pagination
+      const total = await Vehicle.countDocuments(searchFilter);
+      const totalPages = Math.ceil(total / limitNum);
+
+      // Perform the search with pagination
+      const vehicles = await Vehicle.find(searchFilter)
+        .skip(skip)
+        .limit(limitNum)
+        .populate('currentDriver')
+        .populate('maintenanceSchedule')
+        .sort({ createdAt: -1 });
+        
+
+      this.sendResponse(res, 200, {
+        data: vehicles,
+        pagination: {
+          total,
+          page: pageNum,
+          totalPages,
+          limit: limitNum
+        }
+      });
+      return;
+    } catch (error) {
+      this.sendResponse(res, 500, { message: error instanceof Error ? error.message : 'Server error' });
+      return;
+    }
+  }
+
+  // Debug method to check all vehicles in database
+  debugVehicles: AsyncRequestHandler = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const allVehicles = await Vehicle.find().limit(5);
+      console.log('🔍 Debug: All vehicles in database:', allVehicles.length);
+      
+      if (allVehicles.length > 0) {
+        console.log('Sample vehicles:');
+        allVehicles.forEach((vehicle, index) => {
+          console.log(`${index + 1}. Make: "${vehicle.make}", Model: "${vehicle.model}", Registration: "${vehicle.registration}"`);
+        });
+      }
+
+      this.sendResponse(res, 200, {
+        message: 'Debug info logged to console',
+        totalVehicles: allVehicles.length,
+        sampleVehicles: allVehicles.map(v => ({
+          make: v.make,
+          model: v.model,
+          registration: v.registration,
+          plateNumber: v.plateNumber
+        }))
+      });
       return;
     } catch (error) {
       this.sendResponse(res, 500, { message: error instanceof Error ? error.message : 'Server error' });

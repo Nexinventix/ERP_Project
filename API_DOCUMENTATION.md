@@ -68,6 +68,7 @@ _Last updated: 2025-04-25_
 | PATCH  | `/vehicles/:vehicleId/assign`              | Assign vehicle                       | Yes          |
 | PATCH  | `/vehicles/:vehicleId/status`              | Update vehicle status                | Yes          |
 | GET    | `/vehicles`                                | Get all vehicles                     | Yes          |
+| GET    | `/vehicles/search`                         | Search vehicles by name or reg number| Yes          |
 | PATCH  | `/vehicles/:vehicleId/assign-project`      | Assign vehicle to projects           | Yes          |
 | PATCH  | `/vehicles/:vehicleId/assign-client`       | Assign vehicle to clients            | Yes          |
 | PATCH  | `/vehicles/:vehicleId/assign-location`     | Assign vehicle to locations          | Yes          |
@@ -94,9 +95,42 @@ _Last updated: 2025-04-25_
 }
 ```
 
----
+### Example: Search Vehicles
+- **GET** `/api/fleet/vehicles/search?query=toyota&page=1&limit=10`
+- **Query Parameters:**
+  - `query` (required): Search term for vehicle make, model, registration, or plate number
+  - `page` (optional): Page number for pagination (default: 1)
+  - `limit` (optional): Number of results per page (default: 10)
+- **Response:**
+```json
+{
+  "data": [
+    {
+      "_id": "...",
+      "make": "Toyota",
+      "model": "Corolla",
+      "registration": "ABC-123",
+      "plateNumber": "XYZ-987",
+      "type": "Car",
+      "status": "active",
+      "currentDriver": {
+        "_id": "...",
+        "personalInfo": {
+          "name": "John Doe"
+        }
+      }
+    }
+  ],
+  "pagination": {
+    "total": 5,
+    "page": 1,
+    "totalPages": 1,
+    "limit": 10
+  }
+}
+```
 
-## Driver Management
+---
 
 **Base Route:** `/api/driver`
 
@@ -107,6 +141,7 @@ _Last updated: 2025-04-25_
 | PATCH  | `/drivers/:driverId/status`            | Update driver status               | Yes          |
 | PATCH  | `/drivers/:driverId/performance`       | Update driver performance metrics  | Yes          |
 | GET    | `/drivers`                             | Get all drivers                    | Yes          |
+| GET    | `/drivers/search`                      | Search drivers by name or license  | Yes          |
 | GET    | `/drivers/:driverId`                   | Get driver details                 | Yes          |
 
 ### Example: Add Driver
@@ -128,9 +163,42 @@ _Last updated: 2025-04-25_
 }
 ```
 
----
+### Example: Search Drivers
+- **GET** `/api/driver/drivers/search?query=john&page=1&limit=10`
+- **Query Parameters:**
+  - `query` (required): Search term for driver name or license number
+  - `page` (optional): Page number for pagination (default: 1)
+  - `limit` (optional): Number of results per page (default: 10)
+- **Response:**
+```json
+{
+  "data": [
+    {
+      "_id": "...",
+      "personalInfo": {
+        "name": "John Doe",
+        "licenseNumber": "DL-12345",
+        "contact": "+1234567890",
+        "address": "123 Main St"
+      },
+      "status": "available",
+      "assignedVehicle": {
+        "_id": "...",
+        "make": "Toyota",
+        "model": "Corolla"
+      }
+    }
+  ],
+  "pagination": {
+    "total": 3,
+    "page": 1,
+    "totalPages": 1,
+    "limit": 10
+  }
+}
+```
 
-## Trip Management
+---
 
 **Base Route:** `/api/trip`
 
@@ -276,7 +344,89 @@ _Last updated: 2025-04-25_
 
 ---
 
-## Notifications
+## Client Management
+
+**Base Route:** `/api/client`
+
+| Method | Endpoint                                   | Description                        | Auth Required |
+|--------|--------------------------------------------|------------------------------------|--------------|
+| POST   | `/`                                       | Create a new client                | Yes          |
+| GET    | `/`                                       | Get all clients                    | Yes          |
+| GET    | `/search`                                 | Search clients by name or email    | Yes          |
+| GET    | `/:clientId`                              | Get client details                 | Yes          |
+| PUT    | `/:clientId`                              | Update client                      | Yes          |
+| DELETE | `/:clientId`                              | Delete client                      | Yes          |
+
+### Example: Create Client
+- **POST** `/api/client`
+- **Request Body:**
+```json
+{
+  "companyName": "ABC Corporation",
+  "contactPerson": "John Smith",
+  "contactPersonEmail": "john@abccorp.com",
+  "contactPersonPhone": "+1234567890",
+  "email": "info@abccorp.com",
+  "phone": "+1234567890",
+  "address": "123 Business St, City, State",
+  "industry": "Technology",
+  "notes": "Premium client with high priority"
+}
+```
+- **Response:**
+```json
+{
+  "message": "Client created successfully",
+  "client": {
+    "_id": "...",
+    "companyName": "ABC Corporation",
+    "contactPerson": "John Smith",
+    "contactPersonEmail": "john@abccorp.com",
+    "email": "info@abccorp.com",
+    "phone": "+1234567890",
+    "address": "123 Business St, City, State",
+    "industry": "Technology",
+    "notes": "Premium client with high priority",
+    "createdAt": "2025-01-15T10:30:00.000Z",
+    "updatedAt": "2025-01-15T10:30:00.000Z"
+  }
+}
+```
+
+### Example: Search Clients
+- **GET** `/api/client/search?query=abc&page=1&limit=10`
+- **Query Parameters:**
+  - `query` (required): Search term for company name, contact person, or email
+  - `page` (optional): Page number for pagination (default: 1)
+  - `limit` (optional): Number of results per page (default: 10)
+- **Response:**
+```json
+{
+  "data": [
+    {
+      "_id": "...",
+      "companyName": "ABC Corporation",
+      "contactPerson": "John Smith",
+      "contactPersonEmail": "john@abccorp.com",
+      "email": "info@abccorp.com",
+      "phone": "+1234567890",
+      "address": "123 Business St, City, State",
+      "industry": "Technology",
+      "notes": "Premium client with high priority",
+      "createdAt": "2025-01-15T10:30:00.000Z",
+      "updatedAt": "2025-01-15T10:30:00.000Z"
+    }
+  ],
+  "pagination": {
+    "total": 5,
+    "page": 1,
+    "totalPages": 1,
+    "limit": 10
+  }
+}
+```
+
+---
 
 **Base Route:** `/api/notification`
 
