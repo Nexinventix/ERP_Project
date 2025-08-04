@@ -141,3 +141,10 @@
 2025-08-03 19:39:23 info: =================================
 2025-08-03 19:39:27 info: Database connected successfully!
 2025-08-03 19:39:27 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
+2025-08-03 19:39:39 info: Server running on port 8000
+2025-08-03 19:39:39 info: =================================
+2025-08-03 19:39:39 info: ======= ENV: development =======
+2025-08-03 19:39:39 info: 🚀 App listening on the port 8000
+2025-08-03 19:39:39 info: =================================
+2025-08-03 19:39:41 info: Database connected successfully!
+2025-08-03 19:39:41 info: MongoDB connected: ac-hdvpxia-shard-00-02.j3ewswr.mongodb.net
