@@ -13,10 +13,11 @@ router.patch('/drivers/:driverId/:vehicleId', authMiddleware, DriverController.a
 router.patch('/drivers/:driverId/status', authMiddleware, DriverController.updateDriverStatus as AuthenticatedRequestHandler);
 router.patch('/drivers/:driverId/performance', authMiddleware, DriverController.updatePerformanceMetrics as AuthenticatedRequestHandler);
 router.get('/drivers', authMiddleware, DriverController.getAllDrivers as AuthenticatedRequestHandler);
-router.get('/drivers/:driverId', authMiddleware, DriverController.getDriverDetails as AuthenticatedRequestHandler);
 
-// Search drivers by name or license number
+// Search drivers by name or license number - must come before :driverId route
 router.get('/drivers/search', authMiddleware, DriverController.searchDrivers as AuthenticatedRequestHandler);
+
+router.get('/drivers/:driverId', authMiddleware, DriverController.getDriverDetails as AuthenticatedRequestHandler);
 
 // Debug endpoint to check drivers in database
 router.get('/drivers/debug', authMiddleware, DriverController.debugDrivers as AuthenticatedRequestHandler);
