@@ -1,0 +1,25 @@
+2025-08-05 21:00:50 info: Server running on port 8000
+2025-08-05 21:00:50 info: =================================
+2025-08-05 21:00:50 info: ======= ENV: development =======
+2025-08-05 21:00:50 info: 🚀 App listening on the port 8000
+2025-08-05 21:00:50 info: =================================
+2025-08-05 21:00:54 info: Database connected successfully!
+2025-08-05 21:00:54 info: MongoDB connected: ac-hdvpxia-shard-00-00.j3ewswr.mongodb.net
+2025-08-05 21:14:07 info: ::1 - - [05/Aug/2025:20:14:07 +0000] "POST /api/trips HTTP/1.1" 400 25 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:14:35 info: ::1 - - [05/Aug/2025:20:14:35 +0000] "POST /api/login HTTP/1.1" 200 3127 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:15:05 info: ::1 - - [05/Aug/2025:20:15:05 +0000] "POST /api/trips HTTP/1.1" 404 30 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:16:01 info: ::1 - - [05/Aug/2025:20:16:01 +0000] "POST /api/trips HTTP/1.1" 404 30 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:16:54 info: ::1 - - [05/Aug/2025:20:16:54 +0000] "POST /api/trips HTTP/1.1" 500 124 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:18:38 info: Server running on port 8000
+2025-08-05 21:18:38 info: =================================
+2025-08-05 21:18:38 info: ======= ENV: development =======
+2025-08-05 21:18:38 info: 🚀 App listening on the port 8000
+2025-08-05 21:18:38 info: =================================
+2025-08-05 21:18:41 info: Database connected successfully!
+2025-08-05 21:18:41 info: MongoDB connected: ac-hdvpxia-shard-00-01.j3ewswr.mongodb.net
+2025-08-05 21:18:53 info: ::1 - - [05/Aug/2025:20:18:53 +0000] "POST /api/trips HTTP/1.1" 201 475 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:20:26 info: ::1 - - [05/Aug/2025:20:20:26 +0000] "GET /api/trips HTTP/1.1" 200 2356 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:22:44 info: ::1 - - [05/Aug/2025:20:22:44 +0000] "POST /api/trips HTTP/1.1" 400 37 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:23:34 info: ::1 - - [05/Aug/2025:20:23:34 +0000] "POST /api/trips HTTP/1.1" 201 476 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:23:42 info: ::1 - - [05/Aug/2025:20:23:42 +0000] "GET /api/trips HTTP/1.1" 200 4714 "-" "PostmanRuntime/7.45.0"
+2025-08-05 21:25:44 info: Received SIGINT. Shutting down server...
