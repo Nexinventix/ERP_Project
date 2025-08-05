@@ -122,6 +122,7 @@ class TripController {
       const trips = await Trip.find()
         .populate('vehicle')
         .populate('driver')
+        .populate('client')
         .sort({ startTime: -1 });
 
       res.json(trips);
@@ -136,6 +137,7 @@ class TripController {
       const { vehicleId } = req.params;
       const trips = await Trip.find({ vehicle: vehicleId })
         .populate('driver')
+        .populate('client')
         .sort({ startTime: -1 });
 
       res.json(trips);
@@ -150,6 +152,7 @@ class TripController {
       const { driverId } = req.params;
       const trips = await Trip.find({ driver: driverId })
         .populate('vehicle')
+        .populate('client')
         .sort({ startTime: -1 });
 
       res.json(trips);
@@ -184,6 +187,85 @@ class TripController {
       res.json(statistics);
     } catch (error) {
       res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  // Search trips by various criteria
+  async searchTrips(req: AuthenticatedRequest, res: Response) {
+    try {
+      const { query, page = 1, limit = 10 } = req.query;
+      
+      // Validate query parameter
+      if (!query || typeof query !== 'string' || query.trim().length === 0) {
+        return res.status(400).json({ message: 'Search query is required and must be a non-empty string' });
+      }
+
+      // Pagination parameters
+      const pageNum = parseInt(page as string) || 1;
+      const limitNum = parseInt(limit as string) || 10;
+      const skip = (pageNum - 1) * limitNum;
+
+      // Create search query using regex for case-insensitive search
+      // Remove quotes if they exist around the query
+      const searchQuery = query.trim().replace(/^["']|["']$/g, '');
+      const searchRegex = new RegExp(searchQuery, 'i');
+
+      // Build the search filter using $or with multiple conditions
+      const searchFilter = {
+        $or: [
+          { 'shipmentId': searchRegex },
+          // Search in vehicle fields
+          { 'vehicle.plateNumber': searchRegex },
+          { 'vehicle.model': searchRegex },
+          { 'vehicle.type': searchRegex },
+          // Search in driver fields
+          { 'driver.personalInfo.name': searchRegex },
+          // Search in client fields
+          { 'client.name': searchRegex },
+          { 'client.companyName': searchRegex },
+          // Search in trip fields
+          { 'startLocation': searchRegex },
+          { 'endLocation': searchRegex }
+        ]
+      };
+
+      // Perform the search with pagination and populate related fields
+      const [trips, total] = await Promise.all([
+        Trip.find(searchFilter)
+          .populate({
+            path: 'vehicle',
+            select: 'model type plateNumber'
+          })
+          .populate({
+            path: 'driver',
+            select: 'personalInfo.name'
+          })
+          .populate({
+            path: 'client',
+            select: 'name companyName'
+          })
+          .skip(skip)
+          .limit(limitNum)
+          .sort({ startTime: -1 }),
+        Trip.countDocuments(searchFilter)
+      ]);
+
+      const totalPages = Math.ceil(total / limitNum);
+
+      res.json({
+        data: trips,
+        pagination: {
+          total,
+          page: pageNum,
+          totalPages,
+          limit: limitNum
+        }
+      });
+    } catch (error) {
+      console.error('Error searching trips:', error);
+      res.status(500).json({ 
+        message: error instanceof Error ? error.message : 'Server error during trip search' 
+      });
     }
   }
 }
