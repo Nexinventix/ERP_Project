@@ -15,4 +15,7 @@ router.get('/trips/vehicle/:vehicleId', authMiddleware, TripController.getVehicl
 router.get('/trips/driver/:driverId', authMiddleware, TripController.getDriverTrips as AuthenticatedRequestHandler);
 router.get('/trips/statistics', authMiddleware, TripController.getTripStatistics as AuthenticatedRequestHandler);
 
+// Search trips by various criteria
+router.get('/trips/search', authMiddleware, TripController.searchTrips as AuthenticatedRequestHandler);
+
 export default router;
