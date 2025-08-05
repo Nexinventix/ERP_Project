@@ -119,13 +119,33 @@ class TripController {
   // Get all trips
   async getAllTrips(req: AuthenticatedRequest, res: Response) {
     try {
-      const trips = await Trip.find()
-        .populate('vehicle')
-        .populate('driver')
-        .populate('client')
-        .sort({ startTime: -1 });
+      const { page = 1, limit = 10 } = req.query;
+      const pageNum = parseInt(page as string) || 1;
+      const limitNum = parseInt(limit as string) || 10;
+      const skip = (pageNum - 1) * limitNum;
 
-      res.json(trips);
+      const [trips, total] = await Promise.all([
+        Trip.find()
+          .populate('vehicle')
+          .populate('driver')
+          .populate('client')
+          .sort({ startTime: -1 })
+          .skip(skip)
+          .limit(limitNum),
+        Trip.countDocuments()
+      ]);
+
+      const totalPages = Math.ceil(total / limitNum);
+
+      res.json({
+        data: trips,
+        pagination: {
+          total,
+          page: pageNum,
+          totalPages,
+          limit: limitNum
+        }
+      });
     } catch (error) {
       res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
     }
