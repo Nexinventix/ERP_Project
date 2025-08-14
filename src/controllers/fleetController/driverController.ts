@@ -95,6 +95,7 @@ class DriverController {
 
       // Update driver's assigned vehicle
       driver.assignedVehicle = new ObjectId(vehicleId);
+      
       await driver.save();
 
       // Update vehicle's current driver
@@ -110,7 +111,12 @@ class DriverController {
   // Update driver status
   async updateDriverStatus(req: AuthenticatedRequest, res: Response) {
     try {
-      const { driverId, status } = req.params;
+      const { driverId} = req.params;
+      const status = req.query.status as string
+
+      if(!status){
+        return res.status(400).json({ message: 'Invalid status' });
+      }
 
       if (!['available', 'on-trip', 'off-duty', 'suspended'].includes(status)) {
         return res.status(400).json({ message: 'Invalid status' });
