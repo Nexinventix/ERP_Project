@@ -111,7 +111,7 @@ class DriverController {
   // Update driver status
   async updateDriverStatus(req: AuthenticatedRequest, res: Response) {
     try {
-      const { driverId } = req.params;
+      const driverId  = req.params.driverId;
       const status = req.query.status as string;
 
       // Validate driverId is a valid MongoDB ObjectId
