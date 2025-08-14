@@ -510,27 +510,27 @@ const TripSchema = new Schema<ITrip>({
         numberOfPackages: { 
             type: Number,
             min: [0, 'Number of packages cannot be negative'],
-            max: [100000, 'Number of packages cannot exceed 100,000']
+            // max: [100000, 'Number of packages cannot exceed 100,000']
         },
         fuelLiters: { 
             type: Number,
             min: [0, 'Fuel liters cannot be negative'],
-            max: [100000, 'Fuel liters cannot exceed 100,000']
+            // max: [100000, 'Fuel liters cannot exceed 100,000']
         },
         fuelCost: { 
             type: Number,
             min: [0, 'Fuel cost cannot be negative'],
-            max: [100000, 'Fuel cost cannot exceed 100,000']
+            // max: [100000, 'Fuel cost cannot exceed 100,000']
         },
         maintanceCost: { 
             type: Number,
             min: [0, 'Maintance cost cannot be negative'],
-            max: [100000, 'Maintance cost cannot exceed 100,000']
+            // max: [100000, 'Maintance cost cannot exceed 100,000']
         },
         tollFees: { 
             type: Number,
             min: [0, 'Toll fees cannot be negative'],
-            max: [100000, 'Toll fees cannot exceed 100,000']
+            // max: [100000, 'Toll fees cannot exceed 100,000']
         },
         expectedRevenue: { 
             type: Number, 
