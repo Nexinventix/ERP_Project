@@ -111,19 +111,25 @@ class DriverController {
   // Update driver status
   async updateDriverStatus(req: AuthenticatedRequest, res: Response) {
     try {
-      const { driverId} = req.params;
-      const status = req.query.status as string
+      const { driverId } = req.params;
+      const status = req.query.status as string;
 
-      if(!status){
-        return res.status(400).json({ message: 'Invalid status' });
+      // Validate driverId is a valid MongoDB ObjectId
+      if (!ObjectId.isValid(driverId)) {
+        return res.status(400).json({ message: 'Invalid driver ID format' });
+      }
+
+      // Validate status exists and is a valid value
+      if (!status || typeof status !== 'string') {
+        return res.status(400).json({ message: 'Status is required and must be a string' });
       }
 
       if (!['available', 'on-trip', 'off-duty', 'suspended'].includes(status)) {
-        return res.status(400).json({ message: 'Invalid status' });
+        return res.status(400).json({ message: 'Invalid status value. Must be one of: available, on-trip, off-duty, suspended' });
       }
 
       const driver = await Driver.findByIdAndUpdate(
-        driverId,
+        new ObjectId(driverId),
         { status },
         { new: true }
       );
