@@ -14,6 +14,7 @@ router.get('/trips', authMiddleware,  TripController.getAllTrips as Authenticate
 router.get('/trips/vehicle/:vehicleId', authMiddleware, TripController.getVehicleTrips as AuthenticatedRequestHandler);
 router.get('/trips/driver/:driverId', authMiddleware, TripController.getDriverTrips as AuthenticatedRequestHandler);
 router.get('/trips/statistics', authMiddleware, TripController.getTripStatistics as AuthenticatedRequestHandler);
+router.get('/trips/:tripId', authMiddleware, TripController.getSingleTrip)
 
 // Search trips by various criteria
 router.get('/trips/search', authMiddleware, TripController.searchTrips as AuthenticatedRequestHandler);
