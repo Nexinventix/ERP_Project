@@ -181,6 +181,17 @@ class TripController {
     }
   }
 
+  async getSingleTrip(req:AuthenticatedRequest, res:Response){
+    try{
+      const tripId = req.params.tripId;
+
+      const response = await Trip.findById(tripId).populate('driver').populate('client').populate('vehicle');
+      res.json(response);
+    }catch(error){
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
   // Get trip statistics
   async getTripStatistics(req: AuthenticatedRequest, res: Response) {
     try {
