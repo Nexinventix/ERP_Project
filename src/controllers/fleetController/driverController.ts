@@ -292,6 +292,19 @@ class DriverController {
     }
   }
 
+  async deleteDriver(req: AuthenticatedRequest, res: Response) {
+    try {
+      const { driverId } = req.params;
+      const driver = await Driver.findByIdAndDelete(driverId);
+      if (!driver) {
+        return res.status(404).json({ message: 'Driver not found' });
+      }
+      res.json({ message: 'Driver deleted successfully', driver });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
   // Debug method to check all drivers in database
   async debugDrivers(req: AuthenticatedRequest, res: Response) {
     try {

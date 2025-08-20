@@ -22,4 +22,6 @@ router.get('/drivers/:driverId', authMiddleware, DriverController.getDriverDetai
 // Debug endpoint to check drivers in database
 router.get('/drivers/debug', authMiddleware, DriverController.debugDrivers as AuthenticatedRequestHandler);
 
+router.delete('/drivers/:driverId', authMiddleware, DriverController.deleteDriver as AuthenticatedRequestHandler);
+
 export default router;
