@@ -295,7 +295,7 @@ class DriverController {
   async deleteDriver(req: AuthenticatedRequest, res: Response) {
     try {
       const { driverId } = req.params;
-      const driver = await Driver.findByIdAndDelete(driverId);
+      const driver = await Driver.findByIdAndDelete(new ObjectId(driverId));
       if (!driver) {
         return res.status(404).json({ message: 'Driver not found' });
       }
