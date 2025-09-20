@@ -10,5 +10,7 @@ router.post('/maintenance', authMiddleware, MaintenanceController.scheduleMainte
 router.patch('/maintenance/:maintenanceId/status', authMiddleware, MaintenanceController.updateMaintenanceStatus as AuthenticatedRequestHandler);
 router.get('/maintenance/vehicle/:vehicleId', authMiddleware, MaintenanceController.getMaintenanceHistory as AuthenticatedRequestHandler);
 router.get('/maintenance/upcoming', authMiddleware, MaintenanceController.getUpcomingMaintenance as AuthenticatedRequestHandler);
+// router.get('/maintenance/alerts', authMiddleware, MaintenanceController.sendMaintenanceAlerts as AuthenticatedRequestHandler);
+router.delete('/maintenance/:maintenanceId', authMiddleware, MaintenanceController.deleteMaintenance as AuthenticatedRequestHandler);
 
 export default router;
