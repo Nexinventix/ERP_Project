@@ -138,6 +138,58 @@ class MaintenanceController {
     }
   }
 
+  async deleteMaintenance(req: AuthenticatedRequest, res: Response) {
+    try {
+      const { maintenanceId } = req.params;
+      const maintenance = await Maintenance.findByIdAndDelete(maintenanceId);
+      if (!maintenance) {
+        return res.status(404).json({ message: 'Maintenance record not found' });
+      }
+      res.json({ message: 'Maintenance record deleted successfully', maintenance });
+    } catch (error) {
+      res.status(500).json({ message: error instanceof Error ? error.message : 'Server error' });
+    }
+  }
+
+  async sendMaintenanceAlerts() {
+    try {
+      const today = new Date();
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+
+      const dueMaintenance = await Maintenance.find({
+        status: 'scheduled',
+        scheduledDate: {
+          $gte: today,
+          $lt: tomorrow
+        }
+      }).populate('vehicle');
+
+      // Create notifications for each due maintenance
+      const Notification = (await import('../../models/notification')).default;
+      for (const maintenance of dueMaintenance) {
+        if (maintenance.vehicle && maintenance.vehicle._id) {
+          // Safe access for plateNumber
+          let plateNumber = '';
+          if (typeof maintenance.vehicle === 'object' && maintenance.vehicle !== null && 'plateNumber' in maintenance.vehicle) {
+            plateNumber = (maintenance.vehicle as any).plateNumber;
+          }
+          await Notification.create({
+            vehicle: maintenance.vehicle._id,
+            type: 'maintenance_due',
+            message: `Maintenance is due for vehicle ${plateNumber} on ${maintenance.scheduledDate.toDateString()}`,
+          });
+        }
+      }
+      console.log(`Created notifications for ${dueMaintenance.length} maintenance tasks due tomorrow`);
+      
+      return dueMaintenance;
+    } catch (error) {
+      console.error('Error sending maintenance alerts:', error);
+      throw error;
+    }
+  }
+
   // Update maintenance status
   async updateMaintenanceStatus(req: AuthenticatedRequest, res: Response) {
     try {
