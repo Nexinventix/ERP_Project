@@ -122,7 +122,7 @@ const App = {
       }))
 
       // CORS configuration
-      const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,https://dreamwork-test.vercel.app,https://www.dreamworkslogisticserp.com/')
+      const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,https://dreamwork-test.vercel.app,https://www.dreamworkslogisticserp.com')
       .split(',')
       .map(origin => origin.trim().replace(/\/$/, '')); // remove trailing slash
 
