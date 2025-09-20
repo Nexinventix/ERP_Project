@@ -122,37 +122,42 @@ const App = {
       }))
 
       // CORS configuration
-      const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,https://dreamwork-test.vercel.app,https://www.dreamworkslogisticserp.com')
+      // Define allowed origins with and without www
+      const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,https://dreamwork-test.vercel.app,https://www.dreamworkslogisticserp.com,https://dreamworkslogisticserp.com')
       .split(',')
       .map(origin => origin.trim().replace(/\/$/, '')); // remove trailing slash
 
-      this.app.use(cors({
-      origin: (origin, callback) => {
-         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-         } else {
-            callback(new Error(`CORS policy does not allow access from origin: ${origin}`));
-         }
-      },
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-      allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
-      credentials: true,
-      maxAge: 600
-      }));
+      console.log('Allowed Origins:', allowedOrigins);
 
-      this.app.options("*", cors({
-      origin: (origin, callback) => {
-         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-         } else {
-            callback(new Error(`CORS policy does not allow access from origin: ${origin}`));
-         }
+      const corsOptions = {
+         origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+            console.log('Incoming origin:', origin);
+            // Allow requests with no origin (like mobile apps or curl requests)
+            if (!origin) return callback(null, true);
+            
+            // Check if the origin is in the allowed list or is a subdomain of an allowed origin
+            const isAllowed = allowedOrigins.some(allowedOrigin => 
+               origin === allowedOrigin || 
+               origin === allowedOrigin.replace('www.', '') ||
+               origin === allowedOrigin.replace('https://', 'https://www.')
+            );
+            
+            if (isAllowed) {
+               console.log('Origin allowed:', origin);
+               callback(null, true);
+            } else {
+               console.log('Origin not allowed:', origin);
+               callback(new Error(`CORS policy does not allow access from origin: ${origin}. Allowed origins: ${allowedOrigins.join(', ')}`));
+            }
       },
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-      allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
-      credentials: true
-      }));
+         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+         allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key', 'X-Requested-With'],
+         credentials: true,
+         maxAge: 600
+      };
 
+      this.app.use(cors(corsOptions));
+      this.app.options('*', cors(corsOptions));
 
       // Body parsing
       this.app.use(express.json({ limit: '10kb' })) // Limit body size
