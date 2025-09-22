@@ -77,7 +77,7 @@ export function generateAccountCreatedEmailHTML(firstName: string, email: string
           </td>
         </tr>
       </table>
-      <a href="https://dreamworkerp.nexinventix.com/login" style="display:inline-block;padding:12px 24px;background:#3b82f6;color:#fff;border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:0.5px;margin-bottom:18px;">
+      <a href="https://dreamworkslogisticserp.com/login" style="display:inline-block;padding:12px 24px;background:#3b82f6;color:#fff;border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:0.5px;margin-bottom:18px;">
         Log In to Your Account
       </a>
       <p style="font-size:14px;color:#718096;margin-top:24px;">
