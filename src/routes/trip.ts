@@ -9,6 +9,9 @@ const router = Router();
 
 // Trip routes
 router.post('/trips', authMiddleware, permissionMiddleware([Permission.CREATE_TRIP]), TripController.createTrip as AuthenticatedRequestHandler);
+// Search trips by various criteria
+router.get('/trips/search', authMiddleware, TripController.searchTrips as AuthenticatedRequestHandler);
+
 router.patch('/trips/:tripId/status', authMiddleware, permissionMiddleware([Permission.EDIT_TRIP]), TripController.updateTripStatus as AuthenticatedRequestHandler);
 router.get('/trips', authMiddleware,  TripController.getAllTrips as AuthenticatedRequestHandler);
 router.get('/trips/vehicle/:vehicleId', authMiddleware, TripController.getVehicleTrips as AuthenticatedRequestHandler);
@@ -16,7 +19,6 @@ router.get('/trips/driver/:driverId', authMiddleware, TripController.getDriverTr
 router.get('/trips/statistics', authMiddleware, TripController.getTripStatistics as AuthenticatedRequestHandler);
 router.get('/trips/:tripId', authMiddleware, TripController.getSingleTrip)
 
-// Search trips by various criteria
-router.get('/trips/search', authMiddleware, TripController.searchTrips as AuthenticatedRequestHandler);
+
 
 export default router;

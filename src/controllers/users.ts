@@ -319,12 +319,9 @@ class UserController {
         return res.status(400).json({ message: "Cannot modify super admin permissions" })
       }
 
-      // Add new permissions (avoid duplicates)
-      permissions.forEach((perm: Permission) => {
-        if (!user.permissions.includes(perm)) {
-          user.permissions.push(perm)
-        }
-      })
+
+      // Replace user.permissions with the new permissions array
+      user.permissions = permissions
 
       await user.save()
 
