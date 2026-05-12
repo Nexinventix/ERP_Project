@@ -18,6 +18,7 @@ export enum Department {
   CRM = "CRM",
   AIR_SEA_OPERATIONS = "Air & Sea Operations",
   PRICING_QUOTATION = "Pricing & Quotation",
+  SALES = "Sales"
 }
 
 // Interface for User document
@@ -126,6 +127,9 @@ export enum Permission {
   CHANGE_PRICING_QUOTE_STATUS = "change_pricing_quote_status",
   DELETE_PRICING_QUOTE = "delete_pricing_quote",
   GENERATE_QUOTE_SUMMARY_REPORTS = "generate_quote_summary_reports",
+
+  // Sales Department Permissions
+  VIEW_SALES_MODULE = "view_sales",
 }
 
 // Default permissions for each department
@@ -136,6 +140,7 @@ export const DEPARTMENT_DEFAULT_PERMISSIONS: Record<Department, Permission[]> = 
   [Department.CRM]: [Permission.VIEW_CRM_MODULE],
   [Department.AIR_SEA_OPERATIONS]: [Permission.VIEW_AIR_SEA_OPERATIONS_MODULE],
   [Department.PRICING_QUOTATION]: [Permission.VIEW_PRICING_QUOTATION_MODULE],
+  [Department.SALES]: [Permission.VIEW_SALES_MODULE],
 }
 
 // User schema

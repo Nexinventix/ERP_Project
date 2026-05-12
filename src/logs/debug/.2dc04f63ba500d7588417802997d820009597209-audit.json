@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/colindecorce/Desktop/ProjectsPersonal/ERP_Project/src/logs/debug/.2dc04f63ba500d7588417802997d820009597209-audit.json",
+    "files": [
+        {
+            "date": 1769385266623,
+            "name": "/Users/colindecorce/Desktop/ProjectsPersonal/ERP_Project/src/logs/debug/2026-01-26.log",
+            "hash": "d8e83d088758565ed36116327048ddcc56b95856da4ec738b28b994166cf4cd8"
+        }
+    ],
+    "hashType": "sha256"
+}

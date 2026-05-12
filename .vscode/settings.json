@@ -8,5 +8,5 @@
     "source.fixAll.eslint": "explicit"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "left"
 }
